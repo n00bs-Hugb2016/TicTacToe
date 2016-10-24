@@ -9,6 +9,11 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'application'
+
+//This is the main class, the starting point of the program. Replace this when we have a new one. -Julia
+mainClassName = "is.n00bs.temp.tempHelloWorld"
+
 
 // In this section you declare where to find the dependencies of your project
 repositories {
