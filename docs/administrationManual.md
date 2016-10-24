@@ -1,10 +1,12 @@
 # Administration manual for TicTacToe
 
-## Programs needed
-Following programs needed to run this TicTacToe program:
+## Programs
+On a fresh machine the following programs are needed to run this TicTacToe program:
 
-## Installation guide
+## Installation
+How to install and run the program on clients machine (in case of simple desktop program).
 
 ## Deployment
+How to deploy, run and maintain in case of client/server or web application.
 
 ## Maintenance
