@@ -1,7 +1,8 @@
 # Design Report for TicTacToe
-## Team: n00bs
-## Semester: Fall 2016
-## Team members:
+*Semester: Fall 2016*
+## Team
+#### Team name: n00bs
+#### Team members:
 * Berglind Ósk Einarsdóttir
 * Drífa Örvarsdóttir
 * Ísak Snær Sigmarsson
