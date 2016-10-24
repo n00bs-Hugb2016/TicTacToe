@@ -34,7 +34,7 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 2. Code architecture
 	* Declarations:
 		* Only one declaration should be in each line of code.
-			* Example:  `var player;`
+			* Example:  var player;
 			* Example: var winner = getWinner();
 	* Declarations of variables:
 		* Should be in the beginning of each function.
