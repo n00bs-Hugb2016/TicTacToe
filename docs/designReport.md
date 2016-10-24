@@ -28,36 +28,36 @@ A class diagram (a UML) was put together in the beginning of the project to get 
 There are 5 classes.
 
 ##### UI layer
-	**class DisplayBoard**
-		*display()
+	class DisplayBoard
+		+ display()
 ##### Business layer
-	**class GameController**
-		*Player _playerX
-		*Player _playerO
-		*startGame()
-		*clearBoard()
-		*getBoard()
-		*getWinner()
-		*getLoser()
-	**class Player**
-		*int count
-		*char sign
-		*position()
-		*getSign()
-	**class Board**
-		*char boardArray[][]
-		*initializeBoard()
-		*getPosition()
-		*setPositon()
-		*makeMove()
-		*checkStatusOfBoard()
-		*hasWinner()
-		*checkFull()
+	class GameController
+		+ Player _playerX
+		+ Player _playerO
+		+ startGame()
+		+ clearBoard()
+		+ getBoard()
+		+ getWinner()
+		+ getLoser()
+	class Player
+		+ int count
+		+ char sign
+		+ position()
+		+ getSign()
+	class Board
+		+ char boardArray[][]
+		+ initializeBoard()
+		+ getPosition()
+		+ setPositon()
+		+ makeMove()
+		+ checkStatusOfBoard()
+		+ hasWinner()
+		+ checkFull()
 ##### Data layer
-	**class db**
-		*int winsX
-		*int winsY
-		*addWins()
+	class db
+		+ int winsX
+		+ int winsY
+		+ addWins()
 
 																				
 ## Implementation
