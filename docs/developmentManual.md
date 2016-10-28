@@ -58,7 +58,8 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 	* Commentation
 		* When writing a long comment, use the multiline commentation according to Java rules. This should always be done above the subject being commented on.
 			* Example:  
-				`/* comment  
+				```
+				/* comment  
 				that  
 				is  
 				very  
@@ -66,14 +67,15 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 				getWinner()  
 				{  
 					code;  
-				}`
+				}
+				```
 		* When commenting a single line comment, use the single line commentation according to Java Rules. This should always be done above the subject being commented on.
 			* Example:  
-				```javascript
+				```java
 				// comment  
 				getWinner()  
 				{  
-				code;  
+					code;  
 				}
 				```
 	* Character spacing
