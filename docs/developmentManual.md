@@ -17,6 +17,12 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 ## Test Driven Development
 This project uses test driven development (TDD). For each function of the project, start by writing the test for the function and then go into writing the code. Go back to the test cases and add all the tests you can think of and go back to the code. Repeat until all possible tests have been written, coded and passed. After a test is passed, go back to the code and see if you can refactor something. Remember our mantra: "Red, green, refactor, repeat". 
 
+## Branching
+The project has three major branches; *master*, *develop* and *featureDoc*. All other branches are workingstations.
+_master_ is the main branch where the final project will be hosted when all has been merged.
+_develop_ is the branch where all working code is stored. This is the place where all changes of code should be pushed on to.
+_featureDoc_ is a branch that stores the documentation for the project.
+When making a major change to the project, create new branch. When everything has finished on the branch and it is time to merge to *master* or *develop*, create a pull request (see how to create a pull request [here](https://help.github.com/articles/creating-a-pull-request/) and one of your team members will go over the changes and accept or decline the request. 
 
 ## Coding rules
 1. Naming
