@@ -19,40 +19,44 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 1. Naming
 	* Naming functions:
 		* Names of functions should be written in *camelCasing*.
-			* Example: startGame();
+			* Example: `startGame();`
 		* Names of functions should be verbs.
 	* Naming variables; private and public:
 		* *Private* variables should have underscore in front and be written in *camelCasing*
-			* Example: var _humanPlayer;
+			* Example: `var _humanPlayer;`
 		* *Public* variables should be written in *camelCasing*
-			* Example: var computerPlayer;
+			* Example: `var computerPlayer;`
 	* Naming classes:
 		* Should be nouns, in singular.
 		* Should be describing for their content.
 		* Should be written in *PascalCasing*
-			* Example: GameController
+			* Example: `GameController`
 2. Code architecture
 	* Declarations:
 		* Only one declaration should be in each line of code.
-			* Example:  var player;
-			* Example: var winner = getWinner();
+			* Example:  `var player;`
+			* Example: `var winner = getWinner();`
 	* Declarations of variables:
 		* Should be in the beginning of each function.
 		* Arranged by type first, then alphabetically.
 			* Example:  
-				`private getWinner()  
+				```
+				private getWinner()  
 				{  
 				 	int numOfWins = 0;  
 					string pleyer1Name = "Bob";  
 					string player2Name = "Grub";  
-				 }`  
+				 }
+				 ```
 	* Brackets
 		* Brackets are always used after a conditional statement, even though it is only around one expression, to maintain readability.
 			* Example:  
-				`if (*condition*)  
+				```
+				if (*condition*)  
 				{  
 					foo();  
-				}`
+				}
+				```
 	* Indentation
 		* Code should be indented with eight character spacings which equals the push of the "tabs" button.
 	* Commentation
@@ -71,7 +75,12 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 				```
 		* When commenting a single line comment, use the single line commentation according to Java Rules. This should always be done above the subject being commented on.
 			* Example:  
-				```javascript // comment  getWinner()  {  code;  }
+				```
+				// comment  
+				getWinner()  
+				{  
+					code;  
+				}
 				```
 	* Character spacing
 		* Between a condition and a opening parenthesis there should be one space.
