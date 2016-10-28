@@ -92,7 +92,7 @@ Example: If Tinna and Drífa pair program, their comment would look like this:
 				}
 
 	* Indentation
-		* Code should be indented with eight character spacings which equals the push of the "tabs" button.
+		* Code should be indented with four character spacings which equals the push of the "tabs" button.
 	* Commentation
 		* When writing a long comment, use the multiline commentation according to Java rules. This should always be done above the subject being commented on.
 			* Example:  
