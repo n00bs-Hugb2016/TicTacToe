@@ -72,7 +72,7 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 				`// comment`  
 				`getWinner()`  
 				`{`  
-					`code;  
+					`    code;`  
 				`}`
 	* Character spacing
 		* Between a condition and a opening parenthesis there should be one space.
