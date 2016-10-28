@@ -69,7 +69,7 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 				}`
 		* When commenting a single line comment, use the single line commentation according to Java Rules. This should always be done above the subject being commented on.
 			* Example:  
-				```java
+				```javascript
 				// comment  
 				getWinner()  
 				{  
