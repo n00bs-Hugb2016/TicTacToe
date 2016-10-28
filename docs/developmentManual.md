@@ -39,13 +39,13 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 	* Declarations of variables:
 		* Should be in the beginning of each function.
 		* Arranged by type first, then alphabetically.
-			* Example:  
-				private getWinner()  
-				{  
-					int numOfWins = 0;  
-					string pleyer1Name = "Bob";  
-					string player2Name = "Grub";  
-				}  
+			* Example: --> 
+				private getWinner() --> 
+				{  -->
+					int numOfWins = 0; --> 
+					string pleyer1Name = "Bob"; -->  
+					string player2Name = "Grub";  -->
+				}  -->
 	* Brackets
 		* Brackets are always used after a conditional statement, even though it is only around one expression, to maintain readability.
 			* Example:  
