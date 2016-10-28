@@ -19,10 +19,20 @@ This project uses test driven development (TDD). For each function of the projec
 
 ## Branching
 The project has three major branches; *master*, *develop* and *featureDoc*. All other branches are workingstations.
+
 _master_ is the main branch where the final project will be hosted when all has been merged.
+
 _develop_ is the branch where all working code is stored. This is the place where all changes of code should be pushed on to.
+
 _featureDoc_ is a branch that stores the documentation for the project.
+
 When making a major change to the project, create new branch. When everything has finished on the branch and it is time to merge to *master* or *develop*, create a pull request (see how to create a pull request [here](https://help.github.com/articles/creating-a-pull-request/) and one of your team members will go over the changes and accept or decline the request. 
+
+## Commit comment
+When pushing a code that has been coded with pair programming, set the initials of you and your partner in the end of the commit comment.
+
+Example: If Tinna and Drífa pair program, their comment would look like this:
+`"T&D --comment--"`
 
 ## Coding rules
 1. Naming
