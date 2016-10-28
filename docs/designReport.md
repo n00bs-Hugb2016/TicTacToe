@@ -39,6 +39,7 @@ There are 5 classes.
 		+ getBoard()
 		+ getWinner()
 		+ getLoser()
+##### Entity classess
 	class Player
 		+ int count
 		+ char sign
