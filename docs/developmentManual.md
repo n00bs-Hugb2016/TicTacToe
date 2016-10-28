@@ -79,8 +79,8 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 		* Between the parenthesis and the condition, there should be no space.
 		* One space should separate classes and variables from operators, unary operators excluded.
 			* Example:  
-				`a = b + c;  
-				a++;`  
+				`a = b + c;`  
+				`a++;`  
 	* Line spacing
 		* One empty line should separate the definitions of two functions.
 		* One empty line should separate the final variable declaration from the rest of the function's code.
