@@ -11,7 +11,8 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 	* You need to be a member of the n00bs-Hugb2016 organization.
 * Java 1.8.0_101 or newer (the version can be found with the command `java -version`).
 	* Can be installed here: [Click me!]( http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
-* Git Bash installed.
+* Git Bash needs to be installed if you are working on Windows.
+* Commits, pulls and such should be done in command line
 * Account at Advania's Qstack (received from project manager).
 
 
@@ -40,47 +41,99 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 		* Should be in the beginning of each function.
 		* Arranged by type first, then alphabetically.
 			* Example:  
-				`private getWinner()  
+
+
+				private getWinner()  
+
+
 				{  
+
+
 				 	int numOfWins = 0;  
+
+
 					string pleyer1Name = "Bob";  
+
+
 					string player2Name = "Grub";  
-				 }`  
+
+
+				}  
 	* Brackets
 		* Brackets are always used after a conditional statement, even though it is only around one expression, to maintain readability.
 			* Example:  
-				`if (*condition*)  
+
+
+				if (*condition*)  
+
+
 				{  
+
+
 					foo();  
-				}`
+
+
+				}
 	* Indentation
 		* Code should be indented with eight character spacings which equals the push of the "tabs" button.
 	* Commentation
 		* When writing a long comment, use the multiline commentation according to Java rules. This should always be done above the subject being commented on.
 			* Example:  
-				`/* comment  
+
+
+				/* comment  
+
+
 				that  
+
+
 				is  
+
+
 				very  
+
+
 				long */   
+
+
 				getWinner()  
+
+
 				{  
+
+
+
+
 					code;  
-				}`
+				}
 		* When commenting a single line comment, use the single line commentation according to Java Rules. This should always be done above the subject being commented on.
 			* Example:  
-				`// comment  
+
+
+				// comment  
+
+
 				getWinner()  
+
+
 				{  
+
+
 					code;  
-				}`
+
+
+				}
 	* Character spacing
 		* Between a condition and a opening parenthesis there should be one space.
 		* Between the parenthesis and the condition, there should be no space.
 		* One space should separate classes and variables from operators, unary operators excluded.
-			* Example:  
-				`a = b + c;  
-				a++;`  
+			* Example:
+
+  
+				a = b + c;  
+
+
+				a++;  
 	* Line spacing
 		* One empty line should separate the definitions of two functions.
 		* One empty line should separate the final variable declaration from the rest of the function's code.
