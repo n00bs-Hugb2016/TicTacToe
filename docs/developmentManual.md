@@ -15,7 +15,8 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 * Account at Advania's Qstack (received from project manager).
 
 ## Test Driven Development
-This project uses test driven development (TDD). For each function of the project, start by writing the test for the function and then go into writing the code. Go back to the test cases and add all the tests you can think of and go back to the code. Repeat until all possible tests have been written, coded and passed. 
+This project uses test driven development (TDD). For each function of the project, start by writing the test for the function and then go into writing the code. Go back to the test cases and add all the tests you can think of and go back to the code. Repeat until all possible tests have been written, coded and passed. After a test is passed, go back to the code and see if you can refactor something. Remember our mantra: "Red, green, refactor, repeat". 
+
 
 ## Coding rules
 1. Naming
