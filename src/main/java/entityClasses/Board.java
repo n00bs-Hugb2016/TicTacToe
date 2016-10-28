@@ -1,18 +1,18 @@
-package entityClasses.Board;
+package entityClasses;
 
 public class Board
 {
 
-    private char[][] boardArray;
-    private final int arrSize;
+    private static char[][] boardArray;
+    private static int arrSize;
 
     public Board()
     {
         arrSize = 3;
-        boardArray = new char[arrSize][arrSize];
+        boardArray = new char[arrSize][arrSize];		
     }
-
-    public char[][] getBoard() 
+	
+    public static char[][] getBoard() 
     {
         return boardArray;
     }

@@ -1,19 +1,21 @@
 package entityClasses;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+import java.util.Arrays;
 import org.junit.Test;
 
 public class BoardTest 
 {
     public static void main(String args[]) 
     {
-        org.junit.runner.JUnitCore.main("entityClasses.BoardTest");
+        org.junit.runner.JUnitCore.main("entityClasses");
     }
 
     @Test
-    public void testGetBoard () 
+    public void testGetBoard() 
     {
-        assertArrayEquals(char[][] boardArray[3][3], Board.getBoard());
+		Board b  = new Board();
+		assertArrayEquals(new char[3][3], b.getBoard());
     }
 }
 
