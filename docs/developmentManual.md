@@ -54,7 +54,7 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 					foo();
 				}
 	* Indentation
-		* Code should be indented with the push of the "tabs" button.
+		* Code should be indented with eight character spacings which equals the push of the "tabs" button.
 	* Commentation
 		* When writing a long comment, use the multiline commentation according to Java rules. This should always be done above the subject being commented on.
 			* Example:
