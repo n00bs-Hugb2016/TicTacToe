@@ -32,7 +32,7 @@ When making a major change to the project, create new branch. When everything ha
 When pushing a code that has been coded with pair programming, set the first initial of your name and your partner's in the beginning of the commit comment.
 
 Example: If Tinna and Drífa pair program, their comment would look like this:
-`"T&D --comment--"`
+`"T&D comment"`
 
 ## Coding rules
 1. Naming
