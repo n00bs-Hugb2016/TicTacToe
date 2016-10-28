@@ -11,9 +11,11 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 	* You need to be a member of the n00bs-Hugb2016 organization.
 * Java 1.8.0_101 or newer (the version can be found with the command `java -version`).
 	* Can be installed here: [Click me!]( http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
-* Git Bash installed.
+* Git Bash needs to be installed if you're working on Windows.
 * Account at Advania's Qstack (received from project manager).
 
+## Test Driven Development
+This project uses test driven development (TDD). For each function of the project, start by writing the test for the function and then go into writing the code. Go back to the test cases and add all the tests you can think of and go back to the code. Repeat until all possible tests have been written, coded and passed. 
 
 ## Coding rules
 1. Naming
