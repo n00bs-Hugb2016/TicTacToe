@@ -29,7 +29,7 @@ _featureDoc_ is a branch that stores the documentation for the project.
 When making a major change to the project, create new branch. When everything has finished on the branch and it is time to merge to *master* or *develop*, create a pull request (see how to create a pull request [here](https://help.github.com/articles/creating-a-pull-request/) and one of your team members will go over the changes and accept or decline the request. 
 
 ## Commit comment
-When pushing a code that has been coded with pair programming, set the initials of you and your partner in the end of the commit comment.
+When pushing a code that has been coded with pair programming, set the first initial of your name and your partner's in the end of the commit comment.
 
 Example: If Tinna and Drífa pair program, their comment would look like this:
 `"T&D --comment--"`
