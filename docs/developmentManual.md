@@ -43,9 +43,9 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 				private getWinner()  
 				{  
 					int numOfWins = 0;  
-					string player1Name = "Bob";  
+					string pleyer1Name = "Bob";  
 					string player2Name = "Grub";  
-				}
+				}  
 	* Brackets
 		* Brackets are always used after a conditional statement, even though it is only around one expression, to maintain readability.
 			* Example:  
