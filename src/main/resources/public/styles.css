@@ -10,10 +10,12 @@
 
 body {
     width: 100%;
+    margin: 0px;
     position: relative;
     text-align: center;
     background-color: #21252b;
     color: #ebebeb;
+    font-family: sans-serif;
 }
 
 footer {
@@ -21,6 +23,8 @@ footer {
     height: 30px;
     position: fixed;
     bottom: 0;
+    right: 0;
+    left: 0;
     text-align: center;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -37,6 +41,24 @@ footer {
     margin-top: 20px;
 }
 
-.title {
-    font-family: 'Consolas Regular';
+form {
+    font-size: 13px;
+}
+
+input[type=text] {
+    border-bottom: 1px solid #fff;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: transparent;
+    height: 30px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+input[type=submit] {
+    background-color: #4fc3c5;
+    width: 300px;
+    padding: 15px 0px;
+    border: 0px;
 }
