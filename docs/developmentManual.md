@@ -39,56 +39,48 @@ This n00bs project is the making of the popular game of Tic Tac Toe. If you are 
 	* Declarations of variables:
 		* Should be in the beginning of each function.
 		* Arranged by type first, then alphabetically.
-			* Example: <br/>
-				private getWinner() <br/>
-				{ <br/>
-					int numOfWins = 0; <br/>
-					string player1Name = "Bob"; <br/>
-					string player2Name = "Grub"; <br/>
+			* Example:  
+				private getWinner()  
+				{  
+					int numOfWins = 0;  
+					string player1Name = "Bob";  
+					string player2Name = "Grub";  
 				}
 	* Brackets
 		* Brackets are always used after a conditional statement, even though it is only around one expression, to maintain readability.
-			* Example: <br/>
-				if (*condition*) <br/>
-				{ <br/>
-					foo(); <br/>
+			* Example:  
+				if (*condition*)  
+				{  
+					foo();  
 				}
 	* Indentation
 		* Code should be indented with eight character spacings which equals the push of the "tabs" button.
 	* Commentation
 		* When writing a long comment, use the multiline commentation according to Java rules. This should always be done above the subject being commented on.
-			* Example: <br/>
-				/* comment <br/>
-				that <br/>
-				is <br/>
-				very <br/>
-				long */ 
-
-
-				getWinner()
-
- 
-				{ 
-
-
-					code;
-
-
+			* Example:  
+				/* comment  
+				that  
+				is  
+				very  
+				long */   
+				getWinner()  
+				{  
+					code;  
 				}
 		* When commenting a single line comment, use the single line commentation according to Java Rules. This should always be done above the subject being commented on.
-			* Example:--
-				// comment <br/>
-				getWinner() <br/>
-				{ 
-					code; <br/>
+			* Example:  
+				// comment  
+				getWinner()  
+				{  
+					code;  
 				}
 	* Character spacing
 		* Between a condition and a opening parenthesis there should be one space.
 		* Between the parenthesis and the condition, there should be no space.
 		* One space should separate classes and variables from operators, unary operators excluded.
-			* Example:<br/>
-				a = b + c; <br/>
-				a++; <br/>
+			* Example:  
+				a = b + c;  
+				a++;  
 	* Line spacing
 		* One empty line should separate the definitions of two functions.
 		* One empty line should separate the final variable declaration from the rest of the function's code.
