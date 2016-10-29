@@ -1,19 +1,19 @@
-pacage entityClasses;
+package entityClasses;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PlayerTest
 {
-    public static void main(Sting args[])
+    public static void main(String args[])
     {
         org.junit.runner.JUnitCore.main("entityClasses");
     }
 
     @Test
-    public void testCount1 ()
+    public void testgetMoves1 ()
     {
-        Player p = new Player();
-        assertEquals(1, p.count());
+        Player p = new Player('X');
+        assertEquals(1, p.getMoves());
     }
 }
