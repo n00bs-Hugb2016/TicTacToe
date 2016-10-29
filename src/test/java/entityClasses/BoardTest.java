@@ -75,5 +75,13 @@ public class BoardTest
 		assertEquals(true, b.checkFullBoard());
 	}
 
+	@Test
+	public void testOccupied()
+	{
+		Board b = new Board();
+		//testing empty board to see if empty place on certain position
+		assertEquals(true, b.isOccupied(0, 0));
+	}
+
 }
 

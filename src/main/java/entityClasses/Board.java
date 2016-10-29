@@ -44,9 +44,9 @@ public class Board
 	
 	/**
 	 *return the character for the selected place in the board
-	 *@return X or O if a player has selected the field, else empty string
 	 *@param x		the x coordinate of the board
 	 *@param y		the y coordinate of the board
+	 *@return X or O if a player has selected the field, else empty string
 	 *@see char
 	 */
 	public static char getPositionChar(int x, int y)
@@ -77,8 +77,8 @@ public class Board
 	
 	/**
 	 *checks if the board has a win for our current Player
-	 *@return true if the current Player made a win move
 	 *@param playerChar		the character of the current player
+	 *@return true if the current Player made a win move
 	 *@see boolean
 	 */
 	public static boolean checkBoardWinner(char playerChar)
@@ -132,8 +132,8 @@ public class Board
 	
 	/**
 	 *get the right character for current player
-	 *@return X or O
 	 *@param playerChar		the character of the current player
+	 *@return X or O
 	 *@see char
 	 */
 	public static char getPlayer(char playerChar)
@@ -145,7 +145,23 @@ public class Board
 		return playerO;
 		
 	}
-	
-	
+
+	/**
+	 *checks if the space for the character is empty or not, returns bool
+	 *@param x		the x coordinate of the board
+	 *@param y		the y coordinate of the board
+	 *@return a bool false if position on board is empty, true if not empty position 
+	 *@see boolean
+	 */
+	public static boolean isOccupied(int x, int y)
+	{
+		if(boardArray[x][y] != ' ')
+		{
+			//place on board is not empty, it is occupied
+			return true;
+		}
+		//place on board is empty, it is not occupied
+		return false:
+	}
 }
 
