@@ -77,6 +77,27 @@ This project uses test driven development (TDD). For each function of the projec
 	* Indentation
 		* Code should be indented with eight character spacings which equals the push of the "tabs" button.
 	* Commentation
+		* When writing a doc comment that should appear in the javadoc, it should be written in HTML and must precede a class, field, constructor or method declaration. For more details you can visit [How to write doc comments for the javadoc tool](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html) 
+			* Example:
+
+
+				/**
+				* this is
+				* a doc comment
+				*/
+
+				 getWinner()
+
+
+                                {
+
+
+                                        code;
+
+
+                                }
+				
+				
 		* When writing a long comment, use the multiline commentation according to Java rules. This should always be done above the subject being commented on.
 			* Example:  
 				
