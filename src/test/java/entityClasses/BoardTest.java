@@ -15,7 +15,21 @@ public class BoardTest
     public void testGetBoard() 
     {
 		Board b  = new Board();
-		assertArrayEquals(new char[3][3], b.getBoard());
+		
+		for(int i = 0; i < b.arrSize; i++)
+		{
+			for(int j = 0; j < b.arrSize; j++)
+			{
+				assertEquals(' ', b.boardArray[i][j]);
+			}
+		}
     }
+	@Test
+	public void testPlayerPosition()
+	{
+		Board b  = new Board();
+		b.setPosition(1, 1, b.playerX);
+		assertEquals('X', b.getPosition(1, 1));
+	}
 }
 
