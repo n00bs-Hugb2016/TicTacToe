@@ -30,10 +30,10 @@ public class GameControllerTest {
 		{
 			for(int j = 0; j < b.getSize(); j++)
 			{
+				//check if each and every one of slots are empty or ' '
 				assertEquals(' ', b.getPositionChar(i,j));
 			}
-		}
-		
+		}		
 	}
 
 }

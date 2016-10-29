@@ -41,4 +41,25 @@ public class GameController {
 		board.fillBoard();
 	}
 
+	/**
+	 * Game starts and is played out.
+	 */
+	public void startGame()
+	{
+		
+	}
+	/**
+	 * Prints the board out.
+	 */
+	public void printBoard()
+	{
+
+	}
+
+	public void display()
+	{
+		
+
+	}
+
 }
