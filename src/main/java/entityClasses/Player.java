@@ -1,7 +1,7 @@
 package entityClasses;
 
 /**
- * This is an entity class, representing a player.
+ * This is an entity class, representing a single player.
  */
 
 public class Player
