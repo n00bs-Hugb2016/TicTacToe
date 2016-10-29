@@ -17,4 +17,9 @@ public class Player
     {
         return movesMade;
     }
+
+    public char getSign()
+    {
+        return sign;
+    }
 }

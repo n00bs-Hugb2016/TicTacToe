@@ -18,7 +18,8 @@ public class PlayerTest
         assertEquals(0, p.getMoves());
     }
 
-    @Test void testGetSign()
+    @Test
+    public void testGetSign()
     {
         assertEquals('X', p.getSign());
     }
