@@ -20,7 +20,6 @@ public class Player
     /**
      * Returns the number of moves made by this player.
      * @return    the number of moves made
-     * @see       int
      */
     public int getMoves ()
     {
@@ -30,7 +29,6 @@ public class Player
     /**
      * Returns this players sign.
      * @return    this player's sign
-     * @see       char
      */
     public char getSign()
     {
