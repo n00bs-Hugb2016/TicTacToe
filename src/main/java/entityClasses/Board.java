@@ -1,5 +1,9 @@
 package entityClasses;
 
+/**
+ * This is an entity class, representing the board.
+ */
+
 public class Board
 {
 
@@ -9,7 +13,7 @@ public class Board
 	private static char playerO = 'O';
 
 	/**
-	 *constructor for the class that initializes private variables.
+	 * Constructor for the class that initializes private variables.
 	 */
     public Board()
     {
@@ -19,9 +23,8 @@ public class Board
     }
 	
 	/**
-	 *get the board
-	 *@return the board array
-	 *@see char[][]
+	 * Returns the board as it is at that moment in the game.
+	 * @return 		the board array
 	 */
     public static char[][] getBoard() 
     {
@@ -29,7 +32,7 @@ public class Board
     }
 	
 	/**
-	 *fill the board with the empty string so we start with a clean board
+	 * Fills the board with the empty string so we start with a clean board.
 	 */
 	public static void fillBoard()
 	{
@@ -37,17 +40,16 @@ public class Board
 		{
 			for(int j = 0; j < boardSize; j++)
 			{
-				boardArray[i][j] = ' ';
+				boardArray[i][j] = ' '; //fill with empty char
 			}
 		}
 	}
 	
 	/**
-	 *return the character for the selected place in the board
-	 *@param x		the x coordinate of the board
-	 *@param y		the y coordinate of the board
-	 *@return X or O if a player has selected the field, else empty string
-	 *@see char
+	 * Return the character for the selected place in the board
+	 * @param x		the x coordinate of the board
+	 * @param y		the y coordinate of the board
+	 * @return 		X or O char if a player has selected the field, else empty string
 	 */
 	public static char getPositionChar(int x, int y)
 	{
@@ -55,9 +57,8 @@ public class Board
 	}
 	
 	/**
-	 *get the size of the board
-	 *@return size of the board
-	 *@see int
+	 * Get the size of the board. 
+	 * @return 		size of the board
 	 */
 	public static int getSize()
 	{
@@ -65,10 +66,10 @@ public class Board
 	}
 	
 	/**
-	 *Sets X or O for the current Player into the right positionin the board
-	 *@param x			the x coordinate of the board
-	 *@param y			the y coordinate of the board
-	 *@param playerChar		the character of the current player
+	 * Sets X or O for the current player into the given position on the board.
+	 * @param x				the x coordinate of the board
+	 * @param y				the y coordinate of the board
+	 * @param playerChar	the character of the current player
 	 */
 	public static void setPositionChar(int x, int y, char playerChar)
 	{
@@ -76,10 +77,9 @@ public class Board
 	}
 	
 	/**
-	 *checks if the board has a win for our current Player
-	 *@param playerChar		the character of the current player
-	 *@return true if the current Player made a win move
-	 *@see boolean
+	 * Checks if the board has a win for the current player.
+	 * @param playerChar		the character of the current player
+	 * @return 					true if the current player made a winning move
 	 */
 	public static boolean checkBoardWinner(char playerChar)
 	{
@@ -109,9 +109,8 @@ public class Board
 	}
 	
 	/**
-	 *Checks if the board is full and the game stops
-	 *@return true or false if the board is full or not
-	 *@see boolean
+	 * Checks if the board is full or not.
+	 * @return 		true if board is full, false if something is empty on the board
 	 */
 	public static boolean checkFullBoard()
 	{
@@ -131,10 +130,9 @@ public class Board
 	}
 	
 	/**
-	 *get the right character for current player
-	 *@param playerChar		the character of the current player
-	 *@return X or O
-	 *@see char
+	 * Get the right character for current player.
+	 * @param playerChar		the character of the current player
+	 * @return 					character of player, X or O
 	 */
 	public static char getPlayer(char playerChar)
 	{
@@ -147,11 +145,10 @@ public class Board
 	}
 
 	/**
-	 *checks if the space for the character is empty or not, returns bool
-	 *@param x		the x coordinate of the board
-	 *@param y		the y coordinate of the board
-	 *@return a bool false if position on board is empty, true if not empty position 
-	 *@see boolean
+	 * Checks if a certain position is empty or not.
+	 * @param x		the x coordinate of the board
+	 * @param y		the y coordinate of the board
+	 * @return 		boolean false if position on board is empty, true if not empty position 
 	 */
 	public static boolean isOccupied(int x, int y)
 	{
