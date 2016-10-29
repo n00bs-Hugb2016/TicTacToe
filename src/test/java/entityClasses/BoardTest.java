@@ -82,6 +82,10 @@ public class BoardTest
 		//testing empty board to see if empty place on certain position
 		//for testing comment
 		assertEquals(false, b.isOccupied(0, 0));
+
+		b.setPositionChar(0,0, 'O');
+		//if position is occupied a true should return
+		assertEquals(true, b.isOccupied(0,0));
 	}
 
 }

@@ -163,5 +163,6 @@ public class Board
 		//place on board is empty, it is not occupied
 		return false;
 	}
+
 }
 
