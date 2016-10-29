@@ -15,7 +15,6 @@ public class Player
     
     public int getMoves ()
     {
-        return 1;
+        return movesMade;
     }
-
 }

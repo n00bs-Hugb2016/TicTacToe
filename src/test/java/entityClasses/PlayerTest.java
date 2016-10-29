@@ -5,15 +5,21 @@ import org.junit.Test;
 
 public class PlayerTest
 {
+    Player p = new Player('X');
+
     public static void main(String args[])
     {
         org.junit.runner.JUnitCore.main("entityClasses");
     }
 
     @Test
-    public void testgetMoves1 ()
+    public void testGetMoves()
     {
-        Player p = new Player('X');
-        assertEquals(1, p.getMoves());
+        assertEquals(0, p.getMoves());
+    }
+
+    @Test void testGetSign()
+    {
+        assertEquals('X', p.getSign());
     }
 }
