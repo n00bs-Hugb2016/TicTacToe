@@ -34,20 +34,4 @@ public class Player
     {
         return sign;
     }
-
-    /**
-     * Makes a move on the board if it is leagal.
-     * @param    board    the game board
-     * @param    x        the x position
-     * @param    y        the y position
-     */
-    public void makeMove(Board board, int x, int y) 
-    {
-        if (board.getPositionChar(x, y) == ' ') 
-        {
-            movesMade++;
-
-            board.setPositionChar(x, y, sign);
-        }
-    }
 }
