@@ -80,7 +80,8 @@ public class BoardTest
 	{
 		Board b = new Board();
 		//testing empty board to see if empty place on certain position
-		assertEquals(true, b.isOccupied(0, 0));
+		//for testing comment
+		assertEquals(false, b.isOccupied(0, 0));
 	}
 
 }

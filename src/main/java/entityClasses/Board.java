@@ -161,7 +161,7 @@ public class Board
 			return true;
 		}
 		//place on board is empty, it is not occupied
-		return false:
+		return false;
 	}
 }
 
