@@ -52,6 +52,28 @@ public class BoardTest
 		b.setPositionChar(2,2, b.getPlayer('O'));
 		assertEquals(true, b.checkBoardWinner(b.getPlayer('O')));
 	}
+	@Test
+	public void testFullBoard()
+	{
+		Board b = new Board();
+		assertEquals(false, b.checkFullBoard());
+		
+		for(int i = 0; i < b.getSize(); i++)
+		{
+			b.setPositionChar(i, 0, b.getPlayer('O'));
+		}
+		
+		assertEquals(false, b.checkFullBoard());
+		
+		for(int i = 0; i < b.getSize(); i++)
+		{
+			for(int j = 0; j < b.getSize(); j++)
+			{
+				b.setPositionChar(i, j, b.getPlayer('X'));
+			}			
+		}
+		assertEquals(true, b.checkFullBoard());
+	}
 
 }
 

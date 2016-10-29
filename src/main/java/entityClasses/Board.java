@@ -45,6 +45,8 @@ public class Board
 	/**
 	 *return the character for the selected place in the board
 	 *@return X or O if a player has selected the field, else empty string
+	 *@param x		the x coordinate of the board
+	 *@param y		the y coordinate of the board
 	 *@see char
 	 */
 	public static char getPositionChar(int x, int y)
@@ -64,6 +66,9 @@ public class Board
 	
 	/**
 	 *Sets X or O for the current Player into the right positionin the board
+	 *@param x			the x coordinate of the board
+	 *@param y			the y coordinate of the board
+	 *@param playerChar		the character of the current player
 	 */
 	public static void setPositionChar(int x, int y, char playerChar)
 	{
@@ -73,6 +78,7 @@ public class Board
 	/**
 	 *checks if the board has a win for our current Player
 	 *@return true if the current Player made a win move
+	 *@param playerChar		the character of the current player
 	 *@see boolean
 	 */
 	public static boolean checkBoardWinner(char playerChar)
@@ -124,11 +130,17 @@ public class Board
 		return true;
 	}
 	
-	public static char getPlayer(char player)
+	/**
+	 *get the right character for current player
+	 *@return X or O
+	 *@param playerChar		the character of the current player
+	 *@see char
+	 */
+	public static char getPlayer(char playerChar)
 	{
-		if(player == 'X')
+		if(playerChar == 'X')
 			return playerX;
-		if(player == 'O')
+		if(playerChar == 'O')
 			return 'O';
 		return playerO;
 		
