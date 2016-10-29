@@ -54,11 +54,29 @@ input[type=text] {
     height: 30px;
     width: 300px;
     margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+input[type=text]:focus {
+    color: #ebebeb;
+    border-bottom: 1.5px solid #4fc3c5;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    outline: none;
 }
 
 input[type=submit] {
     background-color: #4fc3c5;
-    width: 300px;
+    width: 310px;
     padding: 15px 0px;
     border: 0px;
+}
+
+input[type=submit]:hover {
+    background-color: #98edee;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+    outline: none;
 }
