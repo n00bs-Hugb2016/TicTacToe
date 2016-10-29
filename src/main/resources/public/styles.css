@@ -107,9 +107,9 @@ input[type=submit]:hover, input[type=submit]:focus {
 
 table {
     border-collapse: collapse;
-    border: 5px solid #ebebeb;
+    border: 5px solid #21252b;
     font-family: "Courier New", Courier, monospace;
-    font-size: 60px;
+    font-size: 80px;
     width: 80%;
     height: 80%;
 }
@@ -118,8 +118,9 @@ td {
     border: 2px solid #ebebeb;
     padding: 10px;
     border-spacing: 0px;
-    height: 30%;
+    height: 10%;
     width: 10%;
+    display: block;
 }
 
 .player {
