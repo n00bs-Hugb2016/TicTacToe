@@ -16,11 +16,11 @@ public class BoardTest
     {
 		Board b  = new Board();
 		
-		for(int i = 0; i < b.boardSize; i++)
+		for(int i = 0; i < b.getSize(); i++)
 		{
-			for(int j = 0; j < b.boardSize; j++)
+			for(int j = 0; j < b.getSize(); j++)
 			{
-				assertEquals(' ', b.boardArray[i][j]);
+				assertEquals(' ', b.getPositionChar(i,j));
 			}
 		}
     }
@@ -28,29 +28,29 @@ public class BoardTest
 	public void testPlayerPosition()
 	{
 		Board b  = new Board();
-		b.setPosition(1, 1, b.playerX);
-		assertEquals('X', b.getPosition(1, 1));
+		b.setPositionChar(1, 1, b.getPlayer('X'));
+		assertEquals('X', b.getPositionChar(1, 1));
 	}
 	@Test
 	public void testWinner()
 	{
 		Board b = new Board();
-		b.setPosition(0,0, b.playerX);
-		b.setPosition(0,1, b.playerX);
-		b.setPosition(0,2, b.playerX);
-		assertEquals(true, b.checkBoardWinner(b.playerX));
+		b.setPositionChar(0,0, b.getPlayer('X'));
+		b.setPositionChar(0,1, b.getPlayer('X'));
+		b.setPositionChar(0,2, b.getPlayer('X'));
+		assertEquals(true, b.checkBoardWinner(b.getPlayer('X')));
 		
 		b.fillBoard();
-		b.setPosition(0,1, b.playerX);
-		b.setPosition(1,1, b.playerX);
-		b.setPosition(2,1, b.playerX);
-		assertEquals(true, b.checkBoardWinner(b.playerX));
+		b.setPositionChar(0,1, b.getPlayer('X'));
+		b.setPositionChar(1,1, b.getPlayer('X'));
+		b.setPositionChar(2,1, b.getPlayer('X'));
+		assertEquals(true, b.checkBoardWinner(b.getPlayer('X')));
 		
 		b.fillBoard();
-		b.setPosition(0,0, b.playerO);
-		b.setPosition(1,1, b.playerO);
-		b.setPosition(2,2, b.playerO);
-		assertEquals(true, b.checkBoardWinner(b.playerO));
+		b.setPositionChar(0,0, b.getPlayer('O'));
+		b.setPositionChar(1,1, b.getPlayer('O'));
+		b.setPositionChar(2,2, b.getPlayer('O'));
+		assertEquals(true, b.checkBoardWinner(b.getPlayer('O')));
 	}
 
 }
