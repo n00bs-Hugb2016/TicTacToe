@@ -59,8 +59,9 @@ input[type=text] {
     color: #ebebeb;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=text]:hover {
     color: #ebebeb;
+    background-color: transparent;
     border-bottom: 1.5px solid #4fc3c5;
     border-top: 0px;
     border-left: 0px;
@@ -94,6 +95,32 @@ input[type=submit]:hover, input[type=submit]:focus {
     background-color: #282c34;
     text-align: center;
     margin-top: 20px;
+}
+
+#game {
+    width: 70%;
+    float: right;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 5px solid #21252b;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 80px;
+    width: 80%;
+    height: 80%;
+}
+
+td {
+    border: 2px solid #ebebeb;
+    padding: 10px;
+    border-spacing: 0px;
+    height: 10%;
+    width: 10%;
+    display: block;
 }
 
 .player {
