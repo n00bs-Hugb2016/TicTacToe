@@ -5,36 +5,108 @@ import entityClasses.*;
 import java.util.*;
 import java.io.*;
 
+/**
+ * This is an UI class, representing the game being played.
+ */
 
 public class consoleUI 
 {
+	private static GameController game;
+
 	public static void main(String args[])
 	{
-		/*GameController game = new GameController();
-		
-		//Console console = System.console();
+		Scanner scanIn = new Scanner(System.in);
 
 		System.out.println("Welcome to the game TicTacToe!");
-		
+
 		System.out.println("What is name of player X: ");
-		//String nameX = System.readLine();
-		//game.getPlayer('X').name = nameX;
+		String nameX = scanIn.nextLine();
 		System.out.println("What is name of player O: ");
-		//String nameO = System.readLine();
-		//game.getPlayer('O').name = nameO;
+		String nameO = scanIn.nextLine();
+		game = new GameController(nameX, nameO);
 		
-		System.out.println("Let's start the game!");
+		Boolean continueGame = true;
+		do{
 
-		Boolean stopGame = false;
-		
-		while(stopGame == false)
-		{
-			System.out.println("Write first x position then y position");
-			//System.out.println("Make your move " + game.getWhoStarts().getName());
+			printBoard();
 
-		}*/
+			System.out.println("Let's start the game!");
 
+			Boolean stopGame = false;
+			int moveX, moveY;
 
+			while(stopGame == false)
+			{
+				System.out.println("Make your move " + game.getCurrentPlayer().getName());
+				boolean moveMade = false;
+				do 
+				{
+					System.out.println("Write first the x position: ");
+					moveX = scanIn.nextInt();
+				    System.out.println("Now write the y position: ");
+					moveY = scanIn.nextInt();
+
+					moveMade = game.makeMove(moveX, moveY);
+					if(!moveMade)
+					{
+						System.out.println("Illegal move");
+					}
+				} while(!moveMade);
+				
+				printBoard();
+				
+				int status = game.checkStatus();
+				
+				if (status == 1)
+				{
+					System.out.println(game.getCurrentPlayer().getName() + " is the winner!");				
+					stopGame = true;
+				}
+				else if (status == 2)
+				{
+					System.out.println("It's a draw");
+					stopGame = true;
+				}
+				else
+				{
+					game.switchPlayer();
+				}
+				
+			}
+			System.out.print("Do you want to continue playing TicTacToe? Y/N ");
+			String c = scanIn.nextLine();
+			if(c == "Y" || c == "y")
+			{
+				game.clearBoard(); //clears board for another game
+
+			}
+			else
+			{
+				System.out.println("Thank you for playing the TicTacToe game!");
+				continueGame = false;
+			}
+		}while(continueGame == true);
+		scanIn.close();		
+	}
+
+	/**
+	 * Displays the board for players.
+	 */
+	private static void printBoard() 
+	{
+		char[][] board = game.getBoard();
+
+		System.out.println("     |     |     ");
+		System.out.println("  " + board[0][0] + "  | " + board[0][1] + "   | " + board[0][2]);
+		System.out.println("     |     |     ");
+		System.out.println("-----+-----+-----");
+		System.out.println("     |     |     ");
+		System.out.println("  " + board[1][0] + "  | " + board[1][1] + "   | " + board[1][2]);
+		System.out.println("     |     |     ");
+		System.out.println("-----+-----+-----");
+		System.out.println("     |     |     ");
+		System.out.println("  " + board[2][0] + "  | " + board[2][1] + "   | " + board[2][2]);
+		System.out.println("     |     |     ");
 		
 	}
 }
