@@ -10,8 +10,14 @@ public class GameController {
 
 	private Player _playerX;
 	private Player _playerO;
+<<<<<<< HEAD
 	private Board _board;
 	private Player _currentPlayer;
+=======
+	private Board board;
+	private Player _currentPlayer;
+
+>>>>>>> develop
 	
 	/**
 	 * A constructor for the class GameController.
@@ -21,7 +27,11 @@ public class GameController {
 	{
 		this._playerX = new Player('X', nameX);
 		this._playerO = new Player('O', nameO);
+<<<<<<< HEAD
 		this._board = new Board();
+=======
+		this.board = new Board();
+>>>>>>> develop
 		_currentPlayer = _playerX;
 	}
 	
@@ -110,6 +120,7 @@ public class GameController {
 	{
 		//connection to entityclasses to make a move
 		//add to movesMade in player
+<<<<<<< HEAD
 		if(x >= 0 && x <= 2 && y >= 0 && y <= 2)
 		{
 			if(_board.isOccupied(x, y) == false)
@@ -131,6 +142,11 @@ public class GameController {
 	/**
 	 * Switches current player to X or O
 	 */
+=======
+		
+	}
+	
+>>>>>>> develop
 	public void switchPlayer() 
 	{
 		if(_currentPlayer == _playerX) 

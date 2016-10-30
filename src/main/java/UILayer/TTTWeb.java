@@ -31,22 +31,17 @@ public class TTTWeb implements SparkApplication
 		String param1 = req.queryParams("playerX");
 		String param2 = req.queryParams("playerO");
 		game.setNames(param1, param2);
+		System.out.println("Hello");
 		return res;
 	});
+	
 	redirect.get("/index", "/game");
-	/*
+	
 	post("/game", (req, res) -> 
 	{
-		/*@Override
-		public Object handle(Request request, Response response) 
-		{
-			//board.setBoard();
-			//board.printBoard();
-			return true;
-		}
-		return res; 
+		int input = Integer.parseInt(req.queryParams("input"));
+		return res;
 	});
-	*/
 	
   }
 }
