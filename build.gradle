@@ -14,6 +14,7 @@ apply plugin: 'application'
 //This is the main class, the starting point of the program. Replace this when we have a new one. -Julia
 mainClassName = "UILayer.TTTWeb"
 
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
