@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PlayerTest
 {
-    Player p = new Player('X');
+    Player p = new Player('X', "Player X");
 
     public static void main(String args[])
     {

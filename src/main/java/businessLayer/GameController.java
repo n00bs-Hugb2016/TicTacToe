@@ -37,20 +37,20 @@ public class GameController {
 		_playerO.setName(nameO);
 	}
 	
+	
 	/**
 	 * Get player after what sign is asked for.
 	 * @return 		Player to use
 	 */
-	public Player getPlayer(char sign)
+	public Player getPlayerX()
 	{
-		if(sign == 'X')
-		{
-			return _playerX;
-		}
-		else
-		{
-			return _playerO;
-		}
+		return _playerX;
+	}
+	
+	
+	public Player getPlayerO()
+	{
+		return _playerO;
 	}
 	
 	/**

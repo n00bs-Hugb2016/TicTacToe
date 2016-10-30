@@ -6,8 +6,6 @@ import org.junit.Test;
 
 public class GameControllerTest {
     
-    GameController game = new GameController("Player X", "Player O");
-    Board b = game.getBoard();
 
 	public static void main(String args[])
 	{
@@ -18,7 +16,9 @@ public class GameControllerTest {
 	@Test
 	public void testClearBoard()
 	{
-		
+		GameController game = new GameController();
+		Board b = game.getBoard();
+
 		
 		for(int i = 0; i < b.getSize(); i++)
 		{
@@ -35,21 +35,9 @@ public class GameControllerTest {
 			for(int j = 0; j < b.getSize(); j++)
 			{
 				//check if each and every one of slots are empty or ' '
-				assertEquals(' ', game.getPositionChar(i,j));
+				assertEquals(' ', b.getPositionChar(i,j));
 			}
 		}		
 	}
-    
-    @Test
-    public void testGetNameX()
-    {
-        assertEquals(game._playerX, game.getPlayerX());
-    }
-    
-    @Test
-    public void testGetNameO()
-    {
-        assertEquals(game._playerO, game.getPlayerO());
-    }
 
 }
