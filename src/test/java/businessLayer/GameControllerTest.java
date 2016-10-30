@@ -17,25 +17,25 @@ public class GameControllerTest {
 	public void testClearBoard()
 	{
 		GameController game = new GameController();
-		Board b = game.getBoard();
+		char[][] b = game.getBoard();
 
 		
-		for(int i = 0; i < b.getSize(); i++)
+		for(int i = 0; i < 3; i++)
 		{
-			for(int j = 0; j < b.getSize(); j++)
+			for(int j = 0; j < 3; j++)
 			{
-				b.setPositionChar(i, j, 'O');
+				b[i][j] = 'O';
 			}
 		}
 		game.clearBoard();
 		//if the board is truly empty/cleared it will return false
 		
-		for(int i = 0; i < b.getSize(); i++)
+		for(int i = 0; i < 3; i++)
 		{
-			for(int j = 0; j < b.getSize(); j++)
+			for(int j = 0; j < 3; j++)
 			{
 				//check if each and every one of slots are empty or ' '
-				assertEquals(' ', b.getPositionChar(i,j));
+				assertEquals(' ', b[i][j]);
 			}
 		}		
 	}
