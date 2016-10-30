@@ -23,6 +23,7 @@ public class GameController {
 		this._playerO = new Player('O');
 		this.board = new Board();
 	}
+<<<<<<< HEAD
 	/**
 	 * Get player after what sign is asked for.
 	 * @return 		Player to use
@@ -38,6 +39,9 @@ public class GameController {
 			return _playerO;
 		}
 	}
+=======
+
+>>>>>>> develop
 	/**
 	 * Get the board. 
 	 * @return 		Board to use
@@ -60,7 +64,11 @@ public class GameController {
 	 */
 	public void startGame()
 	{
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> develop
 	}
 	/**
 	 * Prints the board out.
@@ -75,6 +83,7 @@ public class GameController {
 		
 
 	}
+<<<<<<< HEAD
 	public Player getWhoStarts()
 	{
 		//random number decides which player is returned
@@ -90,5 +99,7 @@ public class GameController {
 		//connection to entityclasses to make a move
 		//add to movesMade in player
 	}
+=======
+>>>>>>> develop
 
 }
