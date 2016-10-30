@@ -2,9 +2,15 @@
 
 ## Programs
 On a fresh machine the following programs are needed to run this TicTacToe program:
-- Terminal or Command promt
+*Git
+*Java
 
 
 ## Installation
-How to install and run the program on clients machine (in case of simple desktop program).
- - Either one of these programs should be installed on your computer already.
+Clone git repository: https://github.com/n00bs-Hugb2016/TicTacToe.git
+
+## Run
+To run TicTacToe you run the following commands from Git:
+* gradle build
+* gradle run
+
