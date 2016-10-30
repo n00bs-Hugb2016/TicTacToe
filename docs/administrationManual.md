@@ -7,6 +7,7 @@ On a fresh machine the following programs are needed to run this TicTacToe progr
 
 ## Installation
 Clone git repository: https://github.com/n00bs-Hugb2016/TicTacToe.git
+Git set up instructions: [Click me!] ( https://help.github.com/articles/set-up-git/)
 Java can be installed here: [Click me!]( http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 ## Run
@@ -17,3 +18,5 @@ To create a javadoc run this command:
 * ./gradlew javadoc 
 To run unit tests run the following command:
 * bin/unit_test
+To deploy run the following command:
+* bin/deploy
