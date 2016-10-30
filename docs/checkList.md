@@ -26,9 +26,19 @@ _(WIP)_: "Work in Progress"
 ### Extra
 - [ ] _(WIP)_ Integrate database. (0,5 point)
 
+- [ ] Documentation is converted to another format (e.g PDF or Html) and is easily accessible outside of    the build machine after each run.
+
 - [ ] Run focused integration or End-to-end tests (e.g. Selenium). It is necessary to run this on external staging server (e.g. Heroku). To run integration test the application needs to connect to external system e.g. database. To run end-to-end test the system needs to have GUI (e.g. webUI). (1 point)
 
 - [ ] _(WIP)_ Use feature branches and pull requests for all features. It must be clear that this workflow was used the whole time and that the team was using reviews before accepting pull-requests. (1 point)
+
+- [ ] Continuous Delivery. For each code change the CI server runs these steps:
+        * Run build script (all targets)
+        * Run unit and integration tests (if you have integration tests)
+        * Deploy on staging and run End-to-end tests
+        * Deploy to production server. 
+        * Only continue next step if previous step is success
+        * Generate feedback to deceloper
 
 ### Coding
 - [ ] UI layer
