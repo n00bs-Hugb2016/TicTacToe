@@ -1,117 +1,80 @@
-package UILayer;
-
-import businessLayer.*;
-import entityClasses.*;
-import java.util.*;
-import java.io.*;
+package entityClasses;
 
 /**
- * This is an UI class, representing the game being played.
+ * This is an entity class, representing a single player.
  */
 
-public class consoleUI 
+public class Player
 {
-	private static GameController game;
+    private int _movesMade;
+    private int _wins;
+    private char _sign;
+    private String _name;
+     
+    public Player(char playerSign, String playerName) 
+    {
+        _sign = playerSign;
+        _movesMade = 0;
+        _wins = 0;
+		_name = playerName;
+    }
+	    
+    /**
+     * Returns the number of moves made by this player.
+     * @return    the number of moves made
+     */
+    public int getMoves()
+    {
+        return _movesMade;
+    }
 
-	public static void main(String args[])
+     /**
+     * Returns the name for this player.
+     * @return    name of player
+     */
+    public String getName()
+    {
+        return _name;
+    }
+	
+     /**
+     * Set name a move to current player.
+     */
+	public void setName(String name) 
 	{
-		Scanner scanIn = new Scanner(System.in);
-
-		System.out.println("Welcome to the game TicTacToe!");
-
-		System.out.println("What is name of player X: ");
-		String nameX = scanIn.nextLine();
-		System.out.println("What is name of player O: ");
-		String nameO = scanIn.nextLine();
-		game = new GameController(nameX, nameO);
-		
-		Boolean continueGame = true;
-		do{
-
-			printBoard();
-
-			System.out.println("Let's start the game!");
-
-			Boolean stopGame = false;
-			int moveX, moveY;
-
-			while(stopGame == false)
-			{
-				System.out.println("Make your move " + game.getCurrentPlayer().getName());
-				boolean moveMade = false;
-				do 
-				{
-					System.out.println("Write first the x position: ");
-					moveX = scanIn.nextInt();
-				    System.out.println("Now write the y position: ");
-					moveY = scanIn.nextInt();
-					scanIn.nextLine();
-
-					moveMade = game.makeMove(moveX, moveY);
-					if(!moveMade)
-					{
-						System.out.println("Illegal move");
-					}
-				} while(!moveMade);
-				
-				printBoard();
-				
-				int status = game.checkStatus();
-				
-				if(status == 1)
-				{
-					System.out.println(game.getCurrentPlayer().getName() + " is the winner!");				
-					stopGame = true;
-				}
-				else if(status == 2)
-				{
-					System.out.println("It's a draw");
-					stopGame = true;
-				}
-				else if(status == 0)
-				{
-					game.switchPlayer();
-				}
-				
-			}
-			
-			System.out.println("Status of wins for " + game.getPlayerX().getName() + ": " + game.getPlayerX().getWins());
-			System.out.println("Status of wins for " + game.getPlayerO().getName() + ": " + game.getPlayerO().getWins());
-			
-			System.out.println("Do you want to continue playing TicTacToe? Y/N ");
-			char c = scanIn.next().charAt(0);
-			if(c == 'Y' || c == 'y')
-			{
-				game.clearBoard(); //clears board for another game
-
-			}
-			else
-			{
-				System.out.println("Thank you for playing the TicTacToe game!");
-				continueGame = false;
-			}
-		}while(continueGame == true);
-		scanIn.close();		
+		_name = name;
 	}
+    
+    /**
+     * Adds a move to current player.
+     */
+    public void addMove()
+    {
+        _movesMade++;
+    }
 
-	/**
-	 * Displays the board for players.
-	 */
-	private static void printBoard() 
-	{
-		char[][] board = game.getBoard();
+    /**
+     * Returns this players sign.
+     * @return    this player's sign
+     */
+    public char getSign()
+    {
+        return _sign;
+    }
 
-		System.out.println("     |     |     ");
-		System.out.println("  " + board[0][0] + "  | " + board[0][1] + "   | " + board[0][2]);
-		System.out.println("     |     |     ");
-		System.out.println("-----+-----+-----");
-		System.out.println("     |     |     ");
-		System.out.println("  " + board[1][0] + "  | " + board[1][1] + "   | " + board[1][2]);
-		System.out.println("     |     |     ");
-		System.out.println("-----+-----+-----");
-		System.out.println("     |     |     ");
-		System.out.println("  " + board[2][0] + "  | " + board[2][1] + "   | " + board[2][2]);
-		System.out.println("     |     |     ");
-		
-	}
+     /**
+     * Adds the wins for player.
+     */
+     public void addWins()
+     {
+        _wins++;
+     }
+
+     /**
+     * Adds the wins for player.
+     */
+     public int getWins()
+     {
+        return _wins;
+     }
 }

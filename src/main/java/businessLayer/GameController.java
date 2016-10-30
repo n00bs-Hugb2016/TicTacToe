@@ -12,7 +12,18 @@ public class GameController {
 	private Player _playerO;
 	private Board _board;
 	private Player _currentPlayer;
-	
+
+	/**
+	 * A constructor for the class GameController.
+	 * Initializes _playerX, _playerO, board.
+	 */
+	public GameController() 
+	{
+		this._playerX = new Player('X', "Player X");
+		this._playerO = new Player('O', "Player O");
+		_board = new Board();
+	}
+
 	/**
 	 * A constructor for the class GameController.
 	 * Initializes _playerX, _playerO, board.
@@ -24,14 +35,10 @@ public class GameController {
 		this._board = new Board();
 		_currentPlayer = _playerX;
 	}
-	
-	public GameController() 
-	{
-		this._playerX = new Player('X', "Player X");
-		this._playerO = new Player('O', "Player O");
-		_board = new Board();
-	}
-	
+		
+	/**
+	 * Set the name of the player.
+	 */
 	public void setNames(String nameX, String nameO) 
 	{
 		_playerX.setName(nameX);
@@ -90,6 +97,7 @@ public class GameController {
 		//check for win or full board
 		if(_board.checkBoardWinner(_currentPlayer.getSign()))
 		{
+			_currentPlayer.addWins();
 			return 1;
 		}
 		else if(_board.checkFullBoard())
@@ -131,7 +139,6 @@ public class GameController {
 	/**
 	 * Switches current player to X or O
 	 */
-
 	public void switchPlayer() 
 	{
 		if(_currentPlayer == _playerX) 
