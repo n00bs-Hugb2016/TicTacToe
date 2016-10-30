@@ -10,7 +10,7 @@ public class GameController {
 
 	private Player _playerX;
 	private Player _playerO;
-	private Board board;
+	private Board _board;
 	private Player _currentPlayer;
 
 	
@@ -22,7 +22,7 @@ public class GameController {
 	{
 		this._playerX = new Player('X', nameX);
 		this._playerO = new Player('O', nameO);
-		this.board = new Board();
+		this._board = new Board();
 		_currentPlayer = _playerX;
 	}
 	
@@ -30,7 +30,7 @@ public class GameController {
 	{
 		this._playerX = new Player('X', "Player X");
 		this._playerO = new Player('O', "Player O");
-		board = new Board();
+		_board = new Board();
 	}
 	
 	public void setNames(String nameX, String nameO) 
@@ -59,9 +59,9 @@ public class GameController {
 	 * Get the board. 
 	 * @return 		Board to use
 	 */
-	public Board getBoard()
+	public char[][] getBoard()
 	{
-		return board;
+		return _board.getBoard();
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class GameController {
 	 */
 	public void clearBoard()
 	{
-		board.fillBoard();
+		_board.fillBoard();
 	}
 
 	/**
@@ -97,15 +97,44 @@ public class GameController {
 		//random number decides which player is returned
 		return _playerX; //default until fixed
 	}
-	public Boolean checkStatus()
+
+	public Player getCurrentPlayer()
+	{
+		return _currentPlayer;
+	}
+
+	public int checkStatus()
 	{
 		//check for win or full board
-		return false;
+		if(_board.checkBoardWinner(_currentPlayer.getSign()))
+		{
+			return 1;
+		}
+		else if(_board.checkFullBoard())
+		{
+			return 2;
+		}
+		else
+		{
+			return 0;
+		}
 	}
-	public void makeMove()
+
+	public boolean makeMove(int x, int y)
 	{
 		//connection to entityclasses to make a move
 		//add to movesMade in player
+		if(_board.isOccupied(x, y) == false)
+		{
+			_board.setPositionChar(x, y, _currentPlayer.getSign());
+			_currentPlayer.addMove();
+
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 		
 	}
 	
