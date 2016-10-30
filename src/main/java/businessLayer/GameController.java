@@ -12,7 +12,6 @@ public class GameController {
 	private Player _playerO;
 	private Board _board;
 	private Player _currentPlayer;
-
 	
 	/**
 	 * A constructor for the class GameController.

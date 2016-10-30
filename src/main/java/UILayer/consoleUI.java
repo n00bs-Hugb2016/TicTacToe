@@ -21,57 +21,73 @@ public class consoleUI
 		String nameX = scanIn.nextLine();
 		System.out.println("What is name of player O: ");
 		String nameO = scanIn.nextLine();
-		
 		game = new GameController(nameX, nameO);
+		
+		Boolean continueGame = true;
+		do{
 
-		printBoard();
-
-		System.out.println("Let's start the game!");
-
-		Boolean stopGame = false;
-		int moveX;
-		int moveY;
-
-		while(stopGame == false)
-		{
-			System.out.println("Make your move " + game.getCurrentPlayer().getName());
-			boolean moveMade = false;
-			do 
-			{
-				System.out.println("Write first the x position: ");
-				moveX = scanIn.nextInt();
-			    System.out.println("Now write the y position: ");
-				moveY = scanIn.nextInt();
-
-				moveMade = game.makeMove(moveX, moveY);
-				if(!moveMade)
-				{
-					System.out.println("Illegal move");
-				}
-			} while(!moveMade);
-			
-			int status = game.checkStatus();
-			
-			if (status == 1)
-			{
-				System.out.println(game.getCurrentPlayer().getName() + " is the winner!");
-				stopGame = true;
-			}
-			else if (status == 2)
-			{
-				System.out.println("It's a draw");
-				stopGame = true;
-			}
-
-			game.switchPlayer();
 			printBoard();
 
-			//stopGame = true;
-		}
+			System.out.println("Let's start the game!");
+
+			Boolean stopGame = false;
+			int moveX, moveY;
+
+			while(stopGame == false)
+			{
+				System.out.println("Make your move " + game.getCurrentPlayer().getName());
+				boolean moveMade = false;
+				do 
+				{
+					System.out.println("Write first the x position: ");
+					moveX = scanIn.nextInt();
+				    System.out.println("Now write the y position: ");
+					moveY = scanIn.nextInt();
+
+					moveMade = game.makeMove(moveX, moveY);
+					if(!moveMade)
+					{
+						System.out.println("Illegal move");
+					}
+				} while(!moveMade);
+				
+				printBoard();
+				
+				int status = game.checkStatus();
+				
+				if (status == 1)
+				{
+					System.out.println(game.getCurrentPlayer().getName() + " is the winner!");				
+					stopGame = true;
+				}
+				else if (status == 2)
+				{
+					System.out.println("It's a draw");
+					stopGame = true;
+				}
+				else
+				{
+					game.switchPlayer();
+				}
+				
+			}
+				System.out.print("Do you want to continue playing TicTacToe? Y/N ");
+				String c = scanIn.nextLine();
+				if(c == "Y" || c == "y")
+				{
+					game.clearBoard();
+
+				}
+				else
+				{
+					System.out.println("Thank you for playing the TicTacToe game!");
+					continueGame = false;
+				}
+		}while(continueGame == true);
+
 		scanIn.close();
 		
 	}
-
 
 
 	private static void printBoard() 
