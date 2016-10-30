@@ -4,8 +4,10 @@ import businessLayer.*;
 import entityClasses.*;
 import java.util.*;
 import java.io.*;
-//import java.util.Scanner;
 
+/**
+ * This is an UI class, representing the game being played.
+ */
 
 public class consoleUI 
 {
@@ -71,29 +73,28 @@ public class consoleUI
 				}
 				
 			}
-				System.out.print("Do you want to continue playing TicTacToe? Y/N ");
-				String c = scanIn.nextLine();
-				if(c == "Y" || c == "y")
-				{
-					game.clearBoard();
+			System.out.print("Do you want to continue playing TicTacToe? Y/N ");
+			String c = scanIn.nextLine();
+			if(c == "Y" || c == "y")
+			{
+				game.clearBoard(); //clears board for another game
 
-				}
-				else
-				{
-					System.out.println("Thank you for playing the TicTacToe game!");
-					continueGame = false;
-				}
+			}
+			else
+			{
+				System.out.println("Thank you for playing the TicTacToe game!");
+				continueGame = false;
+			}
 		}while(continueGame == true);
-
-		scanIn.close();
-		
+		scanIn.close();		
 	}
 
-
+	/**
+	 * Displays the board for players.
+	 */
 	private static void printBoard() 
 	{
 		char[][] board = game.getBoard();
-
 
 		System.out.println("     |     |     ");
 		System.out.println("  " + board[0][0] + "  | " + board[0][1] + "   | " + board[0][2]);
