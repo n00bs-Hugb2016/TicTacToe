@@ -9,6 +9,7 @@ public class Player
     private int movesMade;
     private int wins;
     private char sign;
+    private String name;
      
     public Player(char playerSign) 
     {
@@ -26,6 +27,15 @@ public class Player
         return movesMade;
     }
 
+     /**
+     * Returns the name for this player.
+     * @return    name of player
+     */
+    public String getName ()
+    {
+        return name;
+    }
+
     /**
      * Returns this players sign.
      * @return    this player's sign
@@ -33,21 +43,5 @@ public class Player
     public char getSign()
     {
         return sign;
-    }
-
-    /**
-     * Makes a move on the board if it is leagal.
-     * @param    board    the game board
-     * @param    x        the x position
-     * @param    y        the y position
-     */
-    public void makeMove(Board board, int x, int y) 
-    {
-        if (board.getPositionChar(x, y) == ' ') 
-        {
-            movesMade++;
-
-            board.setPositionChar(x, y, sign);
-        }
     }
 }
