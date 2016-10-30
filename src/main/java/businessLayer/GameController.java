@@ -23,7 +23,21 @@ public class GameController {
 		this._playerO = new Player('O');
 		this.board = new Board();
 	}
-
+	/**
+	 * Get player after what sign is asked for.
+	 * @return 		Player to use
+	 */
+	public Player getPlayer(char sign)
+	{
+		if(sign == 'X')
+		{
+			return _playerX;
+		}
+		else
+		{
+			return _playerO;
+		}
+	}
 	/**
 	 * Get the board. 
 	 * @return 		Board to use
@@ -46,7 +60,7 @@ public class GameController {
 	 */
 	public void startGame()
 	{
-		
+
 	}
 	/**
 	 * Prints the board out.
@@ -60,6 +74,11 @@ public class GameController {
 	{
 		
 
+	}
+	public Player getWhoStarts()
+	{
+		//random number decides which player is returned
+		return _playerX; //default until fixed
 	}
 
 }
