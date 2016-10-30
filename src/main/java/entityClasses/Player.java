@@ -37,11 +37,17 @@ public class Player
         return _name;
     }
 	
+     /**
+     * Set name a move to current player.
+     */
 	public void setName(String name) 
 	{
 		_name = name;
 	}
-
+    
+    /**
+     * Adds a move to current player.
+     */
     public void addMove()
     {
         _movesMade++;
@@ -55,4 +61,20 @@ public class Player
     {
         return _sign;
     }
+
+     /**
+     * Adds the wins for player.
+     */
+     public void addWins()
+     {
+        _wins++;
+     }
+
+     /**
+     * Adds the wins for player.
+     */
+     public int getWins()
+     {
+        return _wins;
+     }
 }

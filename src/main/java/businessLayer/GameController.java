@@ -90,6 +90,7 @@ public class GameController {
 		//check for win or full board
 		if(_board.checkBoardWinner(_currentPlayer.getSign()))
 		{
+			_currentPlayer.addWins();
 			return 1;
 		}
 		else if(_board.checkFullBoard())
