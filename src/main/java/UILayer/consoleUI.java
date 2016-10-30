@@ -11,21 +11,17 @@ public class consoleUI
 {
 	public static void main(String args[])
 	{
-		GameController game = new GameController();
 		Scanner scanIn = new Scanner(System.in);
-
-		//Console console = System.console();
 
 		System.out.println("Welcome to the game TicTacToe!");
 		
 		System.out.println("What is name of player X: ");
 		String nameX = scanIn.nextLine();
-		
-		//game.getPlayer('X').name = nameX;
 		System.out.println("What is name of player O: ");
 		String nameO = scanIn.nextLine();
-		//game.getPlayer('O').name = nameO;
 		
+		GameController game = new GameController(nameX, nameO);
+
 		System.out.println("Let's start the game!");
 
 		Boolean stopGame = false;
@@ -40,8 +36,6 @@ public class consoleUI
 			stopGame = true;
 		}
 		scanIn.close();
-
-
 		
 	}
 }
