@@ -34,7 +34,6 @@ _(WIP)_: "Work in Progress"
 
 - [ ] Continuous Delivery. For each code change the CI server runs these steps:
 
-
         - Run build script (all targets)
         - Run unit and integration tests (if you have integration tests)
         - Deploy on staging and run End-to-end tests
