@@ -38,26 +38,36 @@ public class GameController {
 		_playerX.setName(nameX);
 		_playerO.setName(nameO);
 	}
-	
-	
+		
 	/**
-	 * Get player after what sign is asked for.
-	 * @return 		Player to use
+	 * Get player X.
+	 * @return 		PlayerX to use
 	 */
 	public Player getPlayerX()
 	{
 		return _playerX;
 	}
 	
-	
+	/**
+	 * Get player O.
+	 * @return 		PlayerO to use
+	 */
 	public Player getPlayerO()
 	{
 		return _playerO;
 	}
-	
 	/**
-	 * Get the board. 
-	 * @return 		Board to use
+	 * Get the player that is currently doing a move.
+	 * @return 		Player, current, to use
+	 */
+	public Player getCurrentPlayer()
+	{
+		return _currentPlayer;
+	}
+
+	/**
+	 * Get the board to use.
+	 * @return 		char[][] to use as board.
 	 */
 	public char[][] getBoard()
 	{
@@ -71,38 +81,11 @@ public class GameController {
 	{
 		_board.fillBoard();
 	}
-
+	
 	/**
-	 * Game starts and is played out.
+	 * Checking to see if there is a winner or if the board is full.
+	 * @return 		int for the status, 1, 2 or 0
 	 */
-	public void startGame()
-	{
-		
-	}
-	/**
-	 * Prints the board out.
-	 */
-	public void printBoard()
-	{
-
-	}
-
-	public void display()
-	{
-		
-
-	}
-	public Player getWhoStarts()
-	{
-		//random number decides which player is returned
-		return _playerX; //default until fixed
-	}
-
-	public Player getCurrentPlayer()
-	{
-		return _currentPlayer;
-	}
-
 	public int checkStatus()
 	{
 		//check for win or full board
@@ -119,8 +102,12 @@ public class GameController {
 			return 0;
 		}
 	}
-
-	public boolean makeMove(int x, int y)
+	
+	/**
+	 * Registers the move for current player.
+	 * @return 		Boolean true if possible to set the position
+	 */
+	public Boolean makeMove(int x, int y)
 	{
 		//connection to entityclasses to make a move
 		//add to movesMade in player
@@ -141,7 +128,10 @@ public class GameController {
 		}
 		
 	}
-	
+
+	/**
+	 * Switches current player to X or O
+	 */
 	public void switchPlayer() 
 	{
 		if(_currentPlayer == _playerX) 
