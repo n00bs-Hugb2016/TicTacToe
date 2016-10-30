@@ -16,9 +16,9 @@ public class Player
         _sign = playerSign;
         _movesMade = 0;
         _wins = 0;
-        _name = playerName;
+		_name = playerName;
     }
-        
+	    
     /**
      * Returns the number of moves made by this player.
      * @return    the number of moves made
@@ -36,14 +36,14 @@ public class Player
     {
         return _name;
     }
-    
+	
      /**
      * Set name a move to current player.
      */
-    public void setName(String name) 
-    {
-        _name = name;
-    }
+	public void setName(String name) 
+	{
+		_name = name;
+	}
     
     /**
      * Adds a move to current player.
