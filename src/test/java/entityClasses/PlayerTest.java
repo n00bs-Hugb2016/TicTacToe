@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class PlayerTest
 {
-    Player p = new Player('X');
+    Player p = new Player('X', "Jon");
 
     public static void main(String args[])
     {
@@ -23,4 +23,10 @@ public class PlayerTest
     {
         assertEquals('X', p.getSign());
     }
+    @Test
+    public void testName()
+    {
+        assertEquals("Jon", p.getName());
+    }
+
 }
