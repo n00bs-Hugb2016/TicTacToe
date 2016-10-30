@@ -33,7 +33,8 @@ public class TTTWeb implements SparkApplication
 		game.setNames(param1, param2);
 		return res;
 	});
-	
+	redirect.get("/index", "/game");
+	/*
 	post("/game", (req, res) -> 
 	{
 		/*@Override
@@ -42,9 +43,10 @@ public class TTTWeb implements SparkApplication
 			//board.setBoard();
 			//board.printBoard();
 			return true;
-		}*/
+		}
 		return res; 
 	});
+	*/
 	
   }
 }
