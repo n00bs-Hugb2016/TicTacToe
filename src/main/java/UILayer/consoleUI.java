@@ -45,6 +45,7 @@ public class consoleUI
 					moveX = scanIn.nextInt();
 				    System.out.println("Now write the y position: ");
 					moveY = scanIn.nextInt();
+					scanIn.nextLine();
 
 					moveMade = game.makeMove(moveX, moveY);
 					if(!moveMade)
@@ -57,25 +58,29 @@ public class consoleUI
 				
 				int status = game.checkStatus();
 				
-				if (status == 1)
+				if(status == 1)
 				{
 					System.out.println(game.getCurrentPlayer().getName() + " is the winner!");				
 					stopGame = true;
 				}
-				else if (status == 2)
+				else if(status == 2)
 				{
 					System.out.println("It's a draw");
 					stopGame = true;
 				}
-				else
+				else if(status == 0)
 				{
 					game.switchPlayer();
 				}
 				
 			}
-			System.out.print("Do you want to continue playing TicTacToe? Y/N ");
-			String c = scanIn.nextLine();
-			if(c == "Y" || c == "y")
+			
+			System.out.println("Status of wins for " + game.getPlayerX().getName() + ": " + game.getPlayerX().getWins());
+			System.out.println("Status of wins for " + game.getPlayerO().getName() + ": " + game.getPlayerO().getWins());
+			
+			System.out.println("Do you want to continue playing TicTacToe? Y/N ");
+			char c = scanIn.next().charAt(0);
+			if(c == 'Y' || c == 'y')
 			{
 				game.clearBoard(); //clears board for another game
 
