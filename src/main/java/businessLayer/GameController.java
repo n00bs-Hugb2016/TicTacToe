@@ -80,5 +80,15 @@ public class GameController {
 		//random number decides which player is returned
 		return _playerX; //default until fixed
 	}
+	public Boolean checkStatus()
+	{
+		//check for win or full board
+		return false;
+	}
+	public void makeMove()
+	{
+		//connection to entityclasses to make a move
+		//add to movesMade in player
+	}
 
 }

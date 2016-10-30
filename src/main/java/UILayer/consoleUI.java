@@ -26,10 +26,12 @@ public class consoleUI {
 		System.out.println("Let's start the game!");
 
 		Boolean stopGame = false;
+		
 		while(stopGame == false)
 		{
 			System.out.println("Write first x position then y position");
 			//System.out.println("Make your move " + game.getWhoStarts().getName());
+
 		}
 
 
