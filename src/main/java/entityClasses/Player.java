@@ -11,12 +11,11 @@ public class Player
     private char sign;
     private String name;
      
-    public Player(char playerSign, String playerName) 
+    public Player(char playerSign) 
     {
         sign = playerSign;
         movesMade = 0;
         wins = 0;
-        name = playerName;
     }
     
     /**
