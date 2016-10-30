@@ -3,6 +3,8 @@ From assignment description
 
 ## Checklist
 ### Must
+_(WIP)_: "Work in Progress"
+
 - [x] The code base is stored in source control system on GitHub from early start of the project (the teacher should be able to track the history of the project from the creation of the very first file).
 
 - [x] The system is set up with automatic build script.
