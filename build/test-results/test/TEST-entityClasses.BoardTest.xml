@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="entityClasses.BoardTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-10-30T17:19:35" hostname="Bebe" time="0.003">
+<testsuite name="entityClasses.BoardTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-10-30T17:27:24" hostname="Bebe" time="0.001">
   <properties/>
   <testcase name="testGetBoard" classname="entityClasses.BoardTest" time="0.0"/>
   <testcase name="testFullBoard" classname="entityClasses.BoardTest" time="0.001"/>

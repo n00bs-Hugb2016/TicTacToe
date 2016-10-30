@@ -4,7 +4,7 @@ import businessLayer.*;
 import entityClasses.*;
 import java.util.*;
 import java.io.*;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 
 public class consoleUI 
@@ -19,18 +19,18 @@ public class consoleUI
 		System.out.println("Welcome to the game TicTacToe!");
 		
 		System.out.println("What is name of player X: ");
-		//String nameX = scanIn.nextLine();
-		String nameX = "John";
+		String nameX = scanIn.nextLine();
+		
 		//game.getPlayer('X').name = nameX;
 		System.out.println("What is name of player O: ");
-		//String nameO = scanIn.nextLine();
-		String nameO = "Sue";
+		String nameO = scanIn.nextLine();
 		//game.getPlayer('O').name = nameO;
 		
 		System.out.println("Let's start the game!");
 
 		Boolean stopGame = false;
 		int move;
+		String bla;
 		while(stopGame == false)
 		{
 			System.out.println("Write first x position then y position");
@@ -39,6 +39,7 @@ public class consoleUI
 			move = scanIn.nextInt();
 			stopGame = true;
 		}
+		scanIn.close();
 
 
 		
