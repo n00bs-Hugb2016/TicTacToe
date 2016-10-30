@@ -33,6 +33,8 @@ _(WIP)_: "Work in Progress"
 - [ ] _(WIP)_ Use feature branches and pull requests for all features. It must be clear that this workflow was used the whole time and that the team was using reviews before accepting pull-requests. (1 point)
 
 - [ ] Continuous Delivery. For each code change the CI server runs these steps:
+
+
         - Run build script (all targets)
         - Run unit and integration tests (if you have integration tests)
         - Deploy on staging and run End-to-end tests
