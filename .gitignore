@@ -24,4 +24,4 @@ gradle-app.settings
 !gradle-wrapper.jar
 
 # Allow Javadocs 
-!/build/docs
+!javadoc/
