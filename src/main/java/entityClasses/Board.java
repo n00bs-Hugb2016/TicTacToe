@@ -7,18 +7,18 @@ package entityClasses;
 public class Board
 {
 
-    private static char[][] boardArray;
-    private static int boardSize;
-	private static char playerX = 'X';
-	private static char playerO = 'O';
+    private static char[][] _boardArray;
+    private static int _boardSize;
+	private static char _playerX = 'X';
+	private static char _playerO = 'O';
 
 	/**
 	 * Constructor for the class that initializes private variables.
 	 */
     public Board()
     {
-        boardSize = 3;
-        boardArray = new char[boardSize][boardSize];
+        _boardSize = 3;
+        _boardArray = new char[_boardSize][_boardSize];
 		fillBoard();
     }
 	
@@ -28,7 +28,7 @@ public class Board
 	 */
     public static char[][] getBoard() 
     {
-        return boardArray;
+        return _boardArray;
     }
 	
 	/**
@@ -36,11 +36,11 @@ public class Board
 	 */
 	public static void fillBoard()
 	{
-		for(int i = 0; i < boardSize; i++)
+		for(int i = 0; i < _boardSize; i++)
 		{
-			for(int j = 0; j < boardSize; j++)
+			for(int j = 0; j < _boardSize; j++)
 			{
-				boardArray[i][j] = ' '; //fill with empty char
+				_boardArray[i][j] = ' '; //fill with empty char
 			}
 		}
 	}
@@ -53,7 +53,7 @@ public class Board
 	 */
 	public static char getPositionChar(int x, int y)
 	{
-		return boardArray[x][y];
+		return _boardArray[x][y];
 	}
 	
 	/**
@@ -62,7 +62,7 @@ public class Board
 	 */
 	public static int getSize()
 	{
-		return boardSize;
+		return _boardSize;
 	}
 	
 	/**
@@ -73,7 +73,7 @@ public class Board
 	 */
 	public static void setPositionChar(int x, int y, char playerChar)
 	{
-		boardArray[x][y] = playerChar;
+		_boardArray[x][y] = playerChar;
 	}
 	
 	/**
@@ -84,25 +84,25 @@ public class Board
 	public static boolean checkBoardWinner(char playerChar)
 	{
 		//check rows
-		if(boardArray[0][0] == boardArray[0][1]&& boardArray[0][1] == boardArray[0][2] && boardArray[0][0] == playerChar)
+		if(_boardArray[0][0] == _boardArray[0][1]&& _boardArray[0][1] == _boardArray[0][2] && _boardArray[0][0] == playerChar)
 			return true;
-		if(boardArray[1][0] == boardArray[1][1]&& boardArray[1][1] == boardArray[1][2] && boardArray[1][0] == playerChar)
+		if(_boardArray[1][0] == _boardArray[1][1]&& _boardArray[1][1] == _boardArray[1][2] && _boardArray[1][0] == playerChar)
 			return true;
-		if(boardArray[2][0] == boardArray[2][1]&& boardArray[2][1] == boardArray[2][2] && boardArray[2][0] == playerChar)
+		if(_boardArray[2][0] == _boardArray[2][1]&& _boardArray[2][1] == _boardArray[2][2] && _boardArray[2][0] == playerChar)
 			return true;
 		
 		//check columns
-		if(boardArray[0][0] == boardArray[1][0]&& boardArray[1][0] == boardArray[2][0] && boardArray[0][0] == playerChar)
+		if(_boardArray[0][0] == _boardArray[1][0]&& _boardArray[1][0] == _boardArray[2][0] && _boardArray[0][0] == playerChar)
 			return true;
-		if(boardArray[0][1] == boardArray[1][1]&& boardArray[1][1] == boardArray[2][1] && boardArray[0][1] == playerChar)
+		if(_boardArray[0][1] == _boardArray[1][1]&& _boardArray[1][1] == _boardArray[2][1] && _boardArray[0][1] == playerChar)
 			return true;
-		if(boardArray[0][2] == boardArray[1][2]&& boardArray[1][2] == boardArray[2][2] && boardArray[0][2] == playerChar)
+		if(_boardArray[0][2] == _boardArray[1][2]&& _boardArray[1][2] == _boardArray[2][2] && _boardArray[0][2] == playerChar)
 			return true;
 		
 		//check corners
-		if(boardArray[0][0] == boardArray[1][1]&& boardArray[1][1] == boardArray[2][2] && boardArray[0][0] == playerChar)
+		if(_boardArray[0][0] == _boardArray[1][1]&& _boardArray[1][1] == _boardArray[2][2] && _boardArray[0][0] == playerChar)
 			return true;
-		if(boardArray[0][2] == boardArray[1][1]&& boardArray[1][1] == boardArray[2][0] && boardArray[0][2] == playerChar)
+		if(_boardArray[0][2] == _boardArray[1][1]&& _boardArray[1][1] == _boardArray[2][0] && _boardArray[0][2] == playerChar)
 			return true;
 		
 		return false;
@@ -114,11 +114,11 @@ public class Board
 	 */
 	public static boolean checkFullBoard()
 	{
-		for(int i = 0; i < boardSize; i++)
+		for(int i = 0; i < _boardSize; i++)
 		{
-			for(int j = 0; j < boardSize; j++)
+			for(int j = 0; j < _boardSize; j++)
 			{
-				if(boardArray[i][j] == ' ')
+				if(_boardArray[i][j] == ' ')
 				{
 					//the board is not full
 					return false;
@@ -137,10 +137,10 @@ public class Board
 	public static char getPlayer(char playerChar)
 	{
 		if(playerChar == 'X')
-			return playerX;
+			return _playerX;
 		if(playerChar == 'O')
 			return 'O';
-		return playerO;
+		return _playerO;
 		
 	}
 
@@ -152,7 +152,7 @@ public class Board
 	 */
 	public static boolean isOccupied(int x, int y)
 	{
-		if(boardArray[x][y] != ' ')
+		if(_boardArray[x][y] != ' ')
 		{
 			//place on board is not empty, it is occupied
 			return true;

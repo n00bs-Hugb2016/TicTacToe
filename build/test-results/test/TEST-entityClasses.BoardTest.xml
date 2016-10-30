@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="entityClasses.BoardTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-10-30T18:41:43" hostname="Bebe" time="0.002">
+<testsuite name="entityClasses.BoardTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-10-30T19:30:35" hostname="Bebe" time="0.003">
   <properties/>
-  <testcase name="testGetBoard" classname="entityClasses.BoardTest" time="0.001"/>
+  <testcase name="testGetBoard" classname="entityClasses.BoardTest" time="0.0"/>
   <testcase name="testFullBoard" classname="entityClasses.BoardTest" time="0.0"/>
   <testcase name="testPlayerPosition" classname="entityClasses.BoardTest" time="0.0"/>
-  <testcase name="testOccupied" classname="entityClasses.BoardTest" time="0.0"/>
+  <testcase name="testOccupied" classname="entityClasses.BoardTest" time="0.001"/>
   <testcase name="testWinner" classname="entityClasses.BoardTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
