@@ -40,7 +40,7 @@ public class Board
 		{
 			for(int j = 0; j < boardSize; j++)
 			{
-				boardArray[i][j] = '+'; //fill with empty char
+				boardArray[i][j] = ' '; //fill with empty char
 			}
 		}
 	}

@@ -11,6 +11,7 @@ public class GameController {
 	private Player _playerX;
 	private Player _playerO;
 	private Board board;
+	private Player _currentPlayer;
 
 	
 	/**
@@ -22,6 +23,7 @@ public class GameController {
 		this._playerX = new Player('X', nameX);
 		this._playerO = new Player('O', nameO);
 		this.board = new Board();
+		_currentPlayer = _playerX;
 	}
 	
 	public GameController() 
@@ -104,6 +106,19 @@ public class GameController {
 	{
 		//connection to entityclasses to make a move
 		//add to movesMade in player
+		
+	}
+	
+	public void switchPlayer() 
+	{
+		if(_currentPlayer == _playerX) 
+		{
+			_currentPlayer = _playerO;
+		}
+		else 
+		{
+			_currentPlayer = _playerX;
+		}
 	}
 
 }
