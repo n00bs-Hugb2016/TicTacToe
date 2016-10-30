@@ -124,12 +124,16 @@ public class GameController {
 	{
 		//connection to entityclasses to make a move
 		//add to movesMade in player
-		if(_board.isOccupied(x, y) == false)
+		if(x >= 0 && x <= 2 && y >= 0 && y <= 2)
 		{
-			_board.setPositionChar(x, y, _currentPlayer.getSign());
-			_currentPlayer.addMove();
+			if(_board.isOccupied(x, y) == false)
+			{
+				_board.setPositionChar(x, y, _currentPlayer.getSign());
+				_currentPlayer.addMove();
 
-			return true;
+				return true;
+			}
+			return false;
 		}
 		else
 		{

@@ -46,7 +46,7 @@ public class consoleUI
 				moveMade = game.makeMove(moveX, moveY);
 				if(!moveMade)
 				{
-					System.out.println("Position is occupied, please try again: ");
+					System.out.println("Illegal move");
 				}
 			} while(!moveMade);
 			
