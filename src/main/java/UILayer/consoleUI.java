@@ -6,11 +6,11 @@ import java.util.*;
 import java.io.*;
 
 
-public class consoleUI {
-
+public class consoleUI 
+{
 	public static void main(String args[])
 	{
-		GameController game = new GameController();
+		/*GameController game = new GameController();
 		
 		//Console console = System.console();
 
@@ -32,7 +32,7 @@ public class consoleUI {
 			System.out.println("Write first x position then y position");
 			//System.out.println("Make your move " + game.getWhoStarts().getName());
 
-		}
+		}*/
 
 
 		

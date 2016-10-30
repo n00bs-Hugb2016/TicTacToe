@@ -11,18 +11,20 @@ public class Player
     private char sign;
     private String name;
      
-    public Player(char playerSign) 
+    public Player(char playerSign, String playerName) 
     {
         sign = playerSign;
         movesMade = 0;
         wins = 0;
+		name = playerName;
     }
+	
     
     /**
      * Returns the number of moves made by this player.
      * @return    the number of moves made
      */
-    public int getMoves ()
+    public int getMoves()
     {
         return movesMade;
     }
@@ -31,10 +33,15 @@ public class Player
      * Returns the name for this player.
      * @return    name of player
      */
-    public String getName ()
+    public String getName()
     {
         return name;
     }
+	
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
 
     /**
      * Returns this players sign.

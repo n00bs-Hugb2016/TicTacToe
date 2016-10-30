@@ -17,12 +17,26 @@ public class GameController {
 	 * A constructor for the class GameController.
 	 * Initializes _playerX, _playerO, board.
 	 */
-	public GameController()
+	public GameController(String nameX, String nameO)
 	{
-		this._playerX = new Player('X');
-		this._playerO = new Player('O');
+		this._playerX = new Player('X', nameX);
+		this._playerO = new Player('O', nameO);
 		this.board = new Board();
 	}
+	
+	public GameController() 
+	{
+		this._playerX = new Player('X', "Player X");
+		this._playerO = new Player('O', "Player O");
+		board = new Board();
+	}
+	
+	public void setNames(String nameX, String nameO) 
+	{
+		_playerX.setName(nameX);
+		_playerO.setName(nameO);
+	}
+	
 	/**
 	 * Get player after what sign is asked for.
 	 * @return 		Player to use
@@ -38,6 +52,7 @@ public class GameController {
 			return _playerO;
 		}
 	}
+	
 	/**
 	 * Get the board. 
 	 * @return 		Board to use
@@ -60,7 +75,7 @@ public class GameController {
 	 */
 	public void startGame()
 	{
-
+		
 	}
 	/**
 	 * Prints the board out.
