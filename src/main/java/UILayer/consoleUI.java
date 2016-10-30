@@ -41,9 +41,9 @@ public class consoleUI
 				boolean moveMade = false;
 				do 
 				{
-					System.out.println("Write first the x position: ");
+					System.out.println("Write first the x position (0/1/2): ");
 					moveX = scanIn.nextInt();
-				    System.out.println("Now write the y position: ");
+				    System.out.println("Now write the y position (0/1/2): ");
 					moveY = scanIn.nextInt();
 					scanIn.nextLine();
 
@@ -65,7 +65,7 @@ public class consoleUI
 				}
 				else if(status == 2)
 				{
-					System.out.println("It's a draw");
+					System.out.println("It's a draw!");
 					stopGame = true;
 				}
 				else if(status == 0)
@@ -77,7 +77,7 @@ public class consoleUI
 			
 			System.out.println("Status of wins for " + game.getPlayerX().getName() + ": " + game.getPlayerX().getWins());
 			System.out.println("Status of wins for " + game.getPlayerO().getName() + ": " + game.getPlayerO().getWins());
-			
+
 			System.out.println("Do you want to continue playing TicTacToe? Y/N ");
 			char c = scanIn.next().charAt(0);
 			if(c == 'Y' || c == 'y')
