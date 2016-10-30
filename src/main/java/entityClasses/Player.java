@@ -42,6 +42,11 @@ public class Player
 		_name = name;
 	}
 
+    public void addMove()
+    {
+        _movesMade++;
+    }
+
     /**
      * Returns this players sign.
      * @return    this player's sign
