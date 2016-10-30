@@ -12,7 +12,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 //This is the main class, the starting point of the program. Replace this when we have a new one. -Julia
-mainClassName = "UILayer.TTTWeb"
+mainClassName = "UILayer.consoleUI"
 
 
 // In this section you declare where to find the dependencies of your project
@@ -33,4 +33,7 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
+}
+run{
+        standardInput = System.in
 }

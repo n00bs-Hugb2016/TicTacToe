@@ -1,0 +1,166 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ */
+
+body {
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    background-color: #21252b;
+    color: #ebebeb;
+    font-family: sans-serif;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #282c34;
+    font-size: 12px;
+    padding: 15px 0px;
+}
+
+#container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+form {
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+input[type=text] {
+    border-bottom: 1px solid #fff;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: transparent;
+    height: 30px;
+    width: 300px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #ebebeb;
+}
+
+input[type=text]:focus, input[type=text]:hover {
+    color: #ebebeb;
+    background-color: transparent;
+    border-bottom: 1.5px solid #4fc3c5;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: #4fc3c5;
+    width: 310px;
+    padding: 15px 0px;
+    border: 0px;
+}
+
+input[type=submit]:hover {
+    background-color: #98edee;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+    outline: none;
+}
+
+#board-container {
+    width: 100%;
+}
+
+#playerBoard {
+    width: 20%;
+    float: right;
+    height: 90%;
+    background-color: #282c34;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#game {
+    width: 70%;
+    float: right;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 10%;
+}
+
+table {
+    border-collapse: collapse;
+    border: 5px solid #21252b;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 80px;
+    width: 80%;
+    height: 80%;
+}
+
+td {
+    border: 2px solid #ebebeb;
+    padding: 10px;
+    border-spacing: 0px;
+    height: 10%;
+    width: 30%;
+}
+
+td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.player {
+    width: 100%;
+    height: 50%;
+    padding: 15px 0px;
+}
+
+.player-game {
+    background-color: #4fc3c5;
+    color: #000;
+}
+
+.back {
+    float: left;
+    display: block;
+    text-indent:-9999px;
+    background-image: url("back.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0px;
+    height: 45px;
+    width: 45px;
+}
+
+.back:hover {
+    background-image: url("back-hover.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+table button {
+	background-color: transparent; 
+	border: none;
+	width: 100%; 
+	height: 100%;
+}

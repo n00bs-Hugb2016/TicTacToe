@@ -15,10 +15,13 @@ hs_err_pid*
 # Gradle 
 .gradle
 build/
-/taskArtifacts/
+/taskArtifacts
 
 # Ignore Gradle GUI config
 gradle-app.settings
 
 # Allow Gradle Wrapper
 !gradle-wrapper.jar
+
+# Allow Javadocs 
+!javadoc/
