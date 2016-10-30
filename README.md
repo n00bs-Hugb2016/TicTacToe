@@ -2,16 +2,23 @@
 
 # TicTacToe
 Late Term Assignment in Software Engineering, T-303-HUGB
+
 This is our rendition of the classic game TicTacToe. Looks beautiful. You should play it.
 
 # Team members
--Berglind Ósk Einarsdóttir
--Drífa Örvarsdóttir
--Ívar Snær Sigmarsson
--Júlía Oddsdóttir
--Ólöf Gyða Risten
--Sigurbjörg Rós Sigurðardóttir
--Tinna Þuríður Sigurðardóttir
+Berglind Ósk Einarsdóttir
+
+Drífa Örvarsdóttir
+
+Ívar Snær Sigmarsson
+
+Júlía Oddsdóttir
+
+Ólöf Gyða Risten
+
+Sigurbjörg Rós Sigurðardóttir
+
+Tinna Þuríður Sigurðardóttir
 
 # Building
 In your favourite shell, locate the root of the project in your working directory and use the Gradle command
