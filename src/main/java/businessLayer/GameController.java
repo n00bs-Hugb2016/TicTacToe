@@ -17,6 +17,17 @@ public class GameController {
 	 * A constructor for the class GameController.
 	 * Initializes _playerX, _playerO, board.
 	 */
+	public GameController() 
+	{
+		this._playerX = new Player('X', "Player X");
+		this._playerO = new Player('O', "Player O");
+		_board = new Board();
+	}
+
+	/**
+	 * A constructor for the class GameController.
+	 * Initializes _playerX, _playerO, board.
+	 */
 	public GameController(String nameX, String nameO)
 	{
 		this._playerX = new Player('X', nameX);
@@ -24,14 +35,10 @@ public class GameController {
 		this._board = new Board();
 		_currentPlayer = _playerX;
 	}
-	
-	public GameController() 
-	{
-		this._playerX = new Player('X', "Player X");
-		this._playerO = new Player('O', "Player O");
-		_board = new Board();
-	}
-	
+		
+	/**
+	 * Set the name of the player.
+	 */
 	public void setNames(String nameX, String nameO) 
 	{
 		_playerX.setName(nameX);
