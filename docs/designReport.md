@@ -36,9 +36,10 @@ There are 5 classes.
 		+ Player _playerO
 		+ startGame()
 		+ clearBoard()
-		+ getBoard()
+		+ printBoard()
 		+ getWinner()
 		+ getLoser()
+##### Entity classess
 	class Player
 		+ int count
 		+ char sign
@@ -46,6 +47,7 @@ There are 5 classes.
 		+ getSign()
 	class Board
 		+ char boardArray[][]
+		+ getBoard()
 		+ initializeBoard()
 		+ getPosition()
 		+ setPositon()
