@@ -84,7 +84,7 @@ public class BoardTest
 
 		b.setPositionChar(0,0, 'O');
 		//if position is occupied a true should return
-		assertEquals(false, b.isOccupied(0,0));
+		assertEquals(true, b.isOccupied(0,0));
 	}
 
 }
