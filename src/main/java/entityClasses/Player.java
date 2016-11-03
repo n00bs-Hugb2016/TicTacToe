@@ -6,27 +6,26 @@ package entityClasses;
 
 public class Player
 {
-    private int movesMade;
-    private int wins;
-    private char sign;
-    private String name;
+    private int _movesMade;
+    private int _wins;
+    private char _sign;
+    private String _name;
      
     public Player(char playerSign, String playerName) 
     {
-        sign = playerSign;
-        movesMade = 0;
-        wins = 0;
-		name = playerName;
+        _sign = playerSign;
+        _movesMade = 0;
+        _wins = 0;
+		_name = playerName;
     }
-	
-    
+	    
     /**
      * Returns the number of moves made by this player.
      * @return    the number of moves made
      */
     public int getMoves()
     {
-        return movesMade;
+        return _movesMade;
     }
 
      /**
@@ -35,13 +34,24 @@ public class Player
      */
     public String getName()
     {
-        return name;
+        return _name;
     }
 	
+     /**
+     * Set name a move to current player.
+     */
 	public void setName(String name) 
 	{
-		this.name = name;
+		_name = name;
 	}
+    
+    /**
+     * Adds a move to current player.
+     */
+    public void addMove()
+    {
+        _movesMade++;
+    }
 
     /**
      * Returns this players sign.
@@ -49,6 +59,22 @@ public class Player
      */
     public char getSign()
     {
-        return sign;
+        return _sign;
     }
+
+     /**
+     * Adds the wins for player.
+     */
+     public void addWins()
+     {
+        _wins++;
+     }
+
+     /**
+     * Adds the wins for player.
+     */
+     public int getWins()
+     {
+        return _wins;
+     }
 }

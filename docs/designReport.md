@@ -67,3 +67,4 @@ Team members used Google Docs to go over assignment requirements and to keep tra
 GitHub was used for version control. 
 
 ## Testing
+Testing was conducted using Travis-CI (Continous Integration server), Travis runs all gradle build and compile tasks automatically after each push and tracks the changes made to seperate branches, promting a pull request when merging said branches.

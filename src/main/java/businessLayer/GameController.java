@@ -10,10 +10,20 @@ public class GameController {
 
 	private Player _playerX;
 	private Player _playerO;
-	private Board board;
+	private Board _board;
 	private Player _currentPlayer;
 
-	
+	/**
+	 * A constructor for the class GameController.
+	 * Initializes _playerX, _playerO, board.
+	 */
+	public GameController() 
+	{
+		this._playerX = new Player('X', "Player X");
+		this._playerO = new Player('O', "Player O");
+		_board = new Board();
+	}
+
 	/**
 	 * A constructor for the class GameController.
 	 * Initializes _playerX, _playerO, board.
@@ -22,46 +32,52 @@ public class GameController {
 	{
 		this._playerX = new Player('X', nameX);
 		this._playerO = new Player('O', nameO);
-		this.board = new Board();
+		this._board = new Board();
 		_currentPlayer = _playerX;
 	}
-	
-	public GameController() 
-	{
-		this._playerX = new Player('X', "Player X");
-		this._playerO = new Player('O', "Player O");
-		board = new Board();
-	}
-	
+		
+	/**
+	 * Set the name of the player.
+	 */
 	public void setNames(String nameX, String nameO) 
 	{
 		_playerX.setName(nameX);
 		_playerO.setName(nameO);
 	}
-	
-	
+		
 	/**
-	 * Get player after what sign is asked for.
-	 * @return 		Player to use
+	 * Get player X.
+	 * @return 		PlayerX to use
 	 */
 	public Player getPlayerX()
 	{
 		return _playerX;
 	}
 	
-	
+	/**
+	 * Get player O.
+	 * @return 		PlayerO to use
+	 */
 	public Player getPlayerO()
 	{
 		return _playerO;
 	}
-	
 	/**
-	 * Get the board. 
-	 * @return 		Board to use
+	 * Get the player that is currently doing a move.
+	 * @return 		Player, current, to use
 	 */
-	public Board getBoard()
+	public Player getCurrentPlayer()
 	{
-		return board;
+		return _currentPlayer;
+	}
+
+	/**
+	 * Get the board to use.
+	 * @return 		char[][] to use as board.
+	 */
+	public char[][] getBoard()
+	{
+		return _board.getBoard();
 	}
 
 	/**
@@ -69,46 +85,60 @@ public class GameController {
 	 */
 	public void clearBoard()
 	{
-		board.fillBoard();
+		_board.fillBoard();
 	}
-
+	
 	/**
-	 * Game starts and is played out.
+	 * Checking to see if there is a winner or if the board is full.
+	 * @return 		int for the status, 1, 2 or 0
 	 */
-	public void startGame()
-	{
-		
-	}
-	/**
-	 * Prints the board out.
-	 */
-	public void printBoard()
-	{
-
-	}
-
-	public void display()
-	{
-		
-
-	}
-	public Player getWhoStarts()
-	{
-		//random number decides which player is returned
-		return _playerX; //default until fixed
-	}
-	public Boolean checkStatus()
+	public int checkStatus()
 	{
 		//check for win or full board
-		return false;
+		if(_board.checkBoardWinner(_currentPlayer.getSign()))
+		{
+			_currentPlayer.addWins();
+			return 1;
+		}
+		else if(_board.checkFullBoard())
+		{
+			return 2;
+		}
+		else
+		{
+			return 0;
+		}
 	}
-	public void makeMove()
+	
+	/**
+	 * Registers the move for current player.
+	 * @return 		Boolean true if possible to set the position
+	 */
+	public Boolean makeMove(int x, int y)
 	{
 		//connection to entityclasses to make a move
 		//add to movesMade in player
+		if(x >= 0 && x <= 2 && y >= 0 && y <= 2)
+		{
+			if(_board.isOccupied(x, y) == false)
+			{
+				_board.setPositionChar(x, y, _currentPlayer.getSign());
+				_currentPlayer.addMove();
+
+				return true;
+			}
+			return false;
+		}
+		else
+		{
+			return false;
+		}
 		
 	}
-	
+
+	/**
+	 * Switches current player to X or O
+	 */
 	public void switchPlayer() 
 	{
 		if(_currentPlayer == _playerX) 
